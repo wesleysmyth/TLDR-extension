@@ -1,0 +1,24 @@
+{
+  "project": {
+    "name": "tldr-extension",
+    "description": "Brief project description",
+    "created": "2026-01-30",
+    "last_updated": "2026-01-30"
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "Example Feature",
+      "description": "Detailed description of what this feature should do",
+      "acceptance_criteria": [
+        "Criterion 1",
+        "Criterion 2"
+      ],
+      "status": "pending",
+      "priority": 1,
+      "commit": null,
+      "notes": ""
+    }
+  ],
+  "status_values": ["pending", "in_progress", "testing", "complete", "blocked"]
+}

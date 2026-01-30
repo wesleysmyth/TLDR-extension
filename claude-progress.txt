@@ -1,0 +1,34 @@
+# Project Progress Log
+
+## Project Overview
+[tldr-extension] - [Brief description of what this project does]
+
+## Current Status
+NOT_STARTED | IN_PROGRESS | BLOCKED | COMPLETE
+
+## Session History
+### Session 1 - [DATE]
+- Started project initialization
+- [What was accomplished]
+- [What was left incomplete]
+
+## Completed Features
+<!-- Mark features as complete here with commit references -->
+
+## In Progress
+<!-- Current work items -->
+
+## Known Issues
+<!-- Bugs, blockers, or problems discovered -->
+
+## Technical Decisions
+<!-- Important architectural choices and why they were made -->
+
+## Next Steps
+<!-- Priority-ordered list of what to work on next -->
+1.
+2.
+3.
+
+## Environment Notes
+<!-- Setup requirements, dependencies, or environment-specific info -->
