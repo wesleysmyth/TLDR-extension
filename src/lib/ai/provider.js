@@ -7,12 +7,19 @@ import { GroqProvider } from './groq.js';
 
 /**
  * Get the AI provider (Groq)
- * @param {Object} settings - User settings from storage
+ * @param {Object} settings - User settings from storage (includes variation settings)
  * @returns {Promise<Object|null>} Provider instance or null if not configured
  */
 export async function getProvider(settings = {}) {
   if (settings.groqApiKey) {
-    return new GroqProvider(settings.groqApiKey);
+    // Extract variation settings to pass to the provider
+    const variationSettings = {
+      tone: settings.tone || 'witty',
+      length: settings.length || 'brief',
+      focus: settings.focus || 'key-facts',
+      creativity: settings.creativity || 'balanced',
+    };
+    return new GroqProvider(settings.groqApiKey, variationSettings);
   }
   return null;
 }

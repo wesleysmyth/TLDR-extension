@@ -17,7 +17,13 @@ const DEFAULT_SETTINGS = {
   enableCache: true,
   cacheExpiry: 24 * 60 * 60 * 1000, // 24 hours in ms
 
-  // UI preferences (for future use)
+  // Variation settings for summary customization
+  tone: 'witty',           // 'witty', 'professional', 'casual', 'academic'
+  length: 'brief',         // 'one-liner', 'brief', 'detailed'
+  focus: 'key-facts',      // 'key-facts', 'opinions', 'implications'
+  creativity: 'balanced',  // 'consistent', 'balanced', 'creative'
+
+  // UI preferences
   theme: 'system',
 };
 

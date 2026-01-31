@@ -82,7 +82,78 @@
         <p class="save-status" id="saveStatus"></p>
       </section>
 
-      <!-- Cache Settings - Collapsed by default -->
+      <!-- Summary Style Settings -->
+      <section class="section section--style">
+        <h2 class="section-title">✨ Summary Style</h2>
+        <p class="section-description">Customize how your summaries are written</p>
+
+        <!-- Tone Selector -->
+        <div class="form-group">
+          <label class="form-label">Tone</label>
+          <div class="preset-group" id="tonePresets">
+            <button type="button" class="preset-btn" data-value="witty" data-setting="tone">
+              <span class="preset-icon">😏</span>
+              <span class="preset-name">Witty</span>
+              <span class="preset-desc">Clever & engaging</span>
+            </button>
+            <button type="button" class="preset-btn" data-value="professional" data-setting="tone">
+              <span class="preset-icon">💼</span>
+              <span class="preset-name">Professional</span>
+              <span class="preset-desc">Clear & authoritative</span>
+            </button>
+            <button type="button" class="preset-btn" data-value="casual" data-setting="tone">
+              <span class="preset-icon">👋</span>
+              <span class="preset-name">Casual</span>
+              <span class="preset-desc">Friendly & relaxed</span>
+            </button>
+            <button type="button" class="preset-btn" data-value="academic" data-setting="tone">
+              <span class="preset-icon">🎓</span>
+              <span class="preset-name">Academic</span>
+              <span class="preset-desc">Scholarly & nuanced</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Length Selector -->
+        <div class="form-group">
+          <label class="form-label">Length</label>
+          <div class="preset-group preset-group--horizontal" id="lengthPresets">
+            <button type="button" class="preset-btn preset-btn--compact" data-value="one-liner" data-setting="length">
+              <span class="preset-name">One-liner</span>
+              <span class="preset-desc">~20 words</span>
+            </button>
+            <button type="button" class="preset-btn preset-btn--compact" data-value="brief" data-setting="length">
+              <span class="preset-name">Brief</span>
+              <span class="preset-desc">~35 words</span>
+            </button>
+            <button type="button" class="preset-btn preset-btn--compact" data-value="detailed" data-setting="length">
+              <span class="preset-name">Detailed</span>
+              <span class="preset-desc">~70 words</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Focus Selector -->
+        <div class="form-group">
+          <label class="form-label">Focus</label>
+          <div class="preset-group preset-group--horizontal" id="focusPresets">
+            <button type="button" class="preset-btn preset-btn--compact" data-value="key-facts" data-setting="focus">
+              <span class="preset-name">Key Facts</span>
+              <span class="preset-desc">Main takeaways</span>
+            </button>
+            <button type="button" class="preset-btn preset-btn--compact" data-value="opinions" data-setting="focus">
+              <span class="preset-name">Opinions</span>
+              <span class="preset-desc">Author's stance</span>
+            </button>
+            <button type="button" class="preset-btn preset-btn--compact" data-value="implications" data-setting="focus">
+              <span class="preset-name">Implications</span>
+              <span class="preset-desc">Why it matters</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advanced Settings - Collapsed by default -->
       <details class="section section--details">
         <summary class="details-summary">
           <span>⚙️ Advanced Settings</span>
@@ -92,6 +163,21 @@
         </summary>
 
         <div class="details-content">
+          <!-- Creativity Slider -->
+          <div class="form-group">
+            <label class="form-label">Creativity Level</label>
+            <div class="slider-group">
+              <input type="range" id="creativitySlider" min="0" max="2" value="1" class="slider">
+              <div class="slider-labels">
+                <span>Consistent</span>
+                <span>Balanced</span>
+                <span>Creative</span>
+              </div>
+            </div>
+            <p class="form-hint" id="creativityHint">Balanced: Moderate variety in regenerations</p>
+          </div>
+
+          <!-- Cache Toggle -->
           <div class="form-group">
             <label class="toggle">
               <input type="checkbox" id="enableCache" checked>

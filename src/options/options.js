@@ -1,6 +1,6 @@
 /**
  * TLDR Extension - Options Page Script
- * Simplified Groq-only configuration
+ * Handles API key configuration and variation settings
  */
 
 // ============================================
@@ -20,6 +20,13 @@ const elements = {
   eyeIcon: document.getElementById('eyeIcon'),
   enableCache: document.getElementById('enableCache'),
 
+  // Variation settings
+  tonePresets: document.getElementById('tonePresets'),
+  lengthPresets: document.getElementById('lengthPresets'),
+  focusPresets: document.getElementById('focusPresets'),
+  creativitySlider: document.getElementById('creativitySlider'),
+  creativityHint: document.getElementById('creativityHint'),
+
   // Cache
   cacheCount: document.getElementById('cacheCount'),
   clearCacheBtn: document.getElementById('clearCacheBtn'),
@@ -27,6 +34,24 @@ const elements = {
   // Actions
   saveBtn: document.getElementById('saveBtn'),
   saveStatus: document.getElementById('saveStatus'),
+};
+
+// ============================================
+// Current Settings State
+// ============================================
+
+let currentSettings = {
+  tone: 'witty',
+  length: 'brief',
+  focus: 'key-facts',
+  creativity: 'balanced',
+};
+
+const creativityValues = ['consistent', 'balanced', 'creative'];
+const creativityHints = {
+  consistent: 'Consistent: Predictable, similar regenerations',
+  balanced: 'Balanced: Moderate variety in regenerations',
+  creative: 'Creative: Diverse, unexpected phrasings',
 };
 
 // ============================================
@@ -63,6 +88,68 @@ async function checkStatus() {
 }
 
 // ============================================
+// Preset Button Management
+// ============================================
+
+function updatePresetButtons(setting, value) {
+  const containerId = `${setting}Presets`;
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // Remove active class from all buttons in this group
+  container.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Add active class to selected button
+  const activeBtn = container.querySelector(`[data-value="${value}"]`);
+  if (activeBtn) {
+    activeBtn.classList.add('active');
+  }
+}
+
+function initPresetButtons() {
+  // Handle all preset button clicks
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const setting = btn.dataset.setting;
+      const value = btn.dataset.value;
+
+      // Update UI immediately
+      updatePresetButtons(setting, value);
+      currentSettings[setting] = value;
+
+      // Auto-save variation settings
+      await saveVariationSettings();
+    });
+  });
+}
+
+// ============================================
+// Creativity Slider
+// ============================================
+
+function updateCreativitySlider(value) {
+  const index = creativityValues.indexOf(value);
+  if (index >= 0) {
+    elements.creativitySlider.value = index;
+    elements.creativityHint.textContent = creativityHints[value];
+  }
+}
+
+function initCreativitySlider() {
+  elements.creativitySlider.addEventListener('input', async () => {
+    const index = parseInt(elements.creativitySlider.value, 10);
+    const value = creativityValues[index];
+    currentSettings.creativity = value;
+    elements.creativityHint.textContent = creativityHints[value];
+
+    // Auto-save
+    await saveVariationSettings();
+  });
+}
+
+// ============================================
 // Settings Management
 // ============================================
 
@@ -72,11 +159,42 @@ async function loadSettings() {
 
     if (response.success) {
       const settings = response.data;
+
+      // API key and cache
       elements.groqApiKey.value = settings.groqApiKey || '';
       elements.enableCache.checked = settings.enableCache !== false;
+
+      // Variation settings
+      currentSettings.tone = settings.tone || 'witty';
+      currentSettings.length = settings.length || 'brief';
+      currentSettings.focus = settings.focus || 'key-facts';
+      currentSettings.creativity = settings.creativity || 'balanced';
+
+      // Update UI
+      updatePresetButtons('tone', currentSettings.tone);
+      updatePresetButtons('length', currentSettings.length);
+      updatePresetButtons('focus', currentSettings.focus);
+      updateCreativitySlider(currentSettings.creativity);
     }
   } catch (error) {
     console.error('[TLDR Options] Failed to load settings:', error);
+  }
+}
+
+async function saveVariationSettings() {
+  try {
+    await chrome.runtime.sendMessage({
+      type: 'SAVE_SETTINGS',
+      settings: {
+        tone: currentSettings.tone,
+        length: currentSettings.length,
+        focus: currentSettings.focus,
+        creativity: currentSettings.creativity,
+      },
+    });
+    // Silent save for variation settings
+  } catch (error) {
+    console.error('[TLDR Options] Failed to save variation settings:', error);
   }
 }
 
@@ -92,6 +210,11 @@ async function saveSettings() {
   const settings = {
     groqApiKey: apiKey || null,
     enableCache: elements.enableCache.checked,
+    // Include variation settings
+    tone: currentSettings.tone,
+    length: currentSettings.length,
+    focus: currentSettings.focus,
+    creativity: currentSettings.creativity,
   };
 
   try {
@@ -210,6 +333,8 @@ elements.groqApiKey.addEventListener('keypress', (e) => {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', async () => {
+  initPresetButtons();
+  initCreativitySlider();
   await loadSettings();
   await checkStatus();
   await loadCacheStats();

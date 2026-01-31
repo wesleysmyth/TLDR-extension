@@ -3,7 +3,7 @@
  * Fast LLM inference using Groq's API (Llama 3.1)
  */
 
-import { SYSTEM_PROMPT, buildUserPrompt } from '../prompts.js';
+import { buildSystemPrompt, buildUserPrompt, getTemperature, getMaxTokens } from '../prompts.js';
 
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 const DEFAULT_MODEL = 'llama-3.1-8b-instant';
@@ -14,10 +14,12 @@ const DEFAULT_MODEL = 'llama-3.1-8b-instant';
 export class GroqProvider {
   /**
    * @param {string} apiKey - Groq API key
+   * @param {Object} variationSettings - Variation settings for summary customization
    */
-  constructor(apiKey) {
+  constructor(apiKey, variationSettings = {}) {
     this.name = 'Groq';
     this.apiKey = apiKey;
+    this.variationSettings = variationSettings;
   }
 
   /**
@@ -31,10 +33,17 @@ export class GroqProvider {
   /**
    * Summarize article content using Groq API
    * @param {Object} article - Article data with title and content
+   * @param {Object} options - Optional override settings
    * @returns {Promise<Object>} Summary result
    */
-  async summarize(article) {
+  async summarize(article, options = {}) {
+    // Merge default variation settings with any overrides
+    const settings = { ...this.variationSettings, ...options };
+
+    const systemPrompt = buildSystemPrompt(settings);
     const userPrompt = buildUserPrompt(article);
+    const temperature = getTemperature(settings.creativity);
+    const maxTokens = getMaxTokens(settings.length);
 
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
@@ -45,11 +54,11 @@ export class GroqProvider {
       body: JSON.stringify({
         model: DEFAULT_MODEL,
         messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'system', content: systemPrompt },
           { role: 'user', content: userPrompt },
         ],
-        temperature: 0.7,
-        max_tokens: 500,
+        temperature,
+        max_tokens: maxTokens,
         response_format: { type: 'json_object' },
       }),
     });
