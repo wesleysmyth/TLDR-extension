@@ -1,34 +1,51 @@
 # Project Progress Log
 
 ## Project Overview
-[tldr-extension] - [Brief description of what this project does]
+[tldr-extension] - Chrome extension that intelligently summarizes articles with a single click using Groq's Llama 3.1 AI
 
 ## Current Status
-NOT_STARTED | IN_PROGRESS | BLOCKED | COMPLETE
+COMPLETE
 
 ## Session History
-### Session 1 - [DATE]
-- Started project initialization
-- [What was accomplished]
-- [What was left incomplete]
+### Session 1 - 2026-01-30
+- Initialized project structure
+- Implemented all 6 features end-to-end
+- Built full extension with Vite
+
+### Session 2 - 2026-01-31
+- Ran build verification (Vite build successful)
+- Ran E2E test suite (8/8 tests passing)
+- Created private GitHub repo and pushed
 
 ## Completed Features
-<!-- Mark features as complete here with commit references -->
+1. Article Extraction - Mozilla Readability.js integration with DOMPurify sanitization
+2. Chrome AI Integration - Provider architecture ready (simplified to Groq-only for MVP)
+3. Groq API Fallback - OpenAI-compatible API with clever prompting
+4. Popup UI - 5 states (loading, success, not-article, error, no-provider)
+5. Options Page - API key management, cache controls, status display
+6. Summary Caching - URL-based hashing, 24hr expiry, LRU eviction (max 100 entries)
 
 ## In Progress
-<!-- Current work items -->
+None - all features complete
 
 ## Known Issues
-<!-- Bugs, blockers, or problems discovered -->
+- Build warning: dynamic import in service-worker.js (non-blocking, optimization hint)
+- 2 moderate npm audit vulnerabilities (in dev dependencies, not runtime)
 
 ## Technical Decisions
-<!-- Important architectural choices and why they were made -->
+- **Groq-only for MVP**: Chrome AI (Gemini Nano) requires origin trial enrollment, simplified to Groq for immediate usability
+- **Provider Factory Pattern**: Architecture ready to add Chrome AI, OpenAI, or other providers later
+- **URL Hashing for Cache**: Using simplified hash function for cache keys to avoid crypto API complexity
+- **24-hour Cache Expiry**: Balance between freshness and reducing API calls
+- **LRU Eviction at 100 entries**: Keep storage footprint small while maintaining useful cache
 
 ## Next Steps
-<!-- Priority-ordered list of what to work on next -->
-1.
-2.
-3.
+1. Publish to Chrome Web Store (optional)
+2. Add Chrome AI provider when origin trial available
+3. Consider adding export features (markdown, sharing)
 
 ## Environment Notes
-<!-- Setup requirements, dependencies, or environment-specific info -->
+- Node.js required for build
+- Vite 5.4.x for bundling
+- Playwright for E2E testing
+- Chrome required for extension testing

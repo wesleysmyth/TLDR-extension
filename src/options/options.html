@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLDR Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="logo">TLDR</h1>
+      <p class="tagline">Article Summarizer</p>
+    </header>
+
+    <main class="main">
+      <!-- API Key Setup - The Hero Section -->
+      <section class="section section--hero">
+        <div class="hero-status" id="heroStatus">
+          <span class="status-dot status-dot--inactive" id="statusDot"></span>
+          <span class="status-label" id="statusLabel">Not connected</span>
+        </div>
+
+        <h2 class="section-title">🔑 Your API Key</h2>
+        <p class="section-description">
+          TLDR uses Groq's free AI to summarize articles. Getting a key takes about 30 seconds!
+        </p>
+
+        <!-- Simple Steps -->
+        <div class="setup-guide" id="setupGuide">
+          <div class="guide-step">
+            <span class="guide-number">1</span>
+            <div class="guide-content">
+              <p class="guide-text">Visit Groq and create a free account</p>
+              <a href="https://console.groq.com/keys" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+                Open Groq →
+              </a>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-number">2</span>
+            <div class="guide-content">
+              <p class="guide-text">Click <strong>"Create API Key"</strong> button, then:</p>
+              <ul class="guide-details">
+                <li><strong>Display Name:</strong> Enter <code>TLDR</code></li>
+                <li><strong>Expiration:</strong> Select <code>No expiration</code></li>
+                <li>Check the "Verify you are human" box</li>
+                <li>Click <strong>Submit</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="guide-number">3</span>
+            <div class="guide-content">
+              <p class="guide-text">Copy the key (starts with <code>gsk_</code>) and paste below</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- API Key Input -->
+        <div class="form-group">
+          <div class="input-group">
+            <input
+              type="password"
+              id="groqApiKey"
+              class="input input--large"
+              placeholder="Paste your API key here (starts with gsk_)"
+              autocomplete="off"
+            >
+            <button type="button" class="btn btn--icon" id="toggleKeyVisibility" title="Show/hide key">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eyeIcon">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--primary btn--full" id="saveBtn">
+          Save API Key
+        </button>
+        <p class="save-status" id="saveStatus"></p>
+      </section>
+
+      <!-- Cache Settings - Collapsed by default -->
+      <details class="section section--details">
+        <summary class="details-summary">
+          <span>⚙️ Advanced Settings</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+
+        <div class="details-content">
+          <div class="form-group">
+            <label class="toggle">
+              <input type="checkbox" id="enableCache" checked>
+              <span class="toggle-slider"></span>
+              <span class="toggle-label">Save summaries for faster loading</span>
+            </label>
+          </div>
+
+          <div class="cache-info" id="cacheInfo">
+            <p><strong id="cacheCount">0</strong> articles cached</p>
+            <button type="button" class="btn btn--secondary btn--sm" id="clearCacheBtn">
+              Clear
+            </button>
+          </div>
+        </div>
+      </details>
+    </main>
+
+    <footer class="footer">
+      <p>TLDR v1.0.0 • Your data stays private</p>
+    </footer>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

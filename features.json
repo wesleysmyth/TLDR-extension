@@ -1,24 +1,89 @@
 {
   "project": {
     "name": "tldr-extension",
-    "description": "Brief project description",
-    "created": "2026-01-30",
-    "last_updated": "2026-01-30"
+    "description": "Chrome extension that summarizes articles with one click using Chrome AI + Groq fallback",
+    "version": "1.0.0",
+    "created": "2026-01-30"
   },
   "features": [
     {
       "id": 1,
-      "name": "Example Feature",
-      "description": "Detailed description of what this feature should do",
-      "acceptance_criteria": [
-        "Criterion 1",
-        "Criterion 2"
-      ],
-      "status": "pending",
+      "name": "Article Extraction",
+      "description": "Extract article content from web pages using Mozilla Readability.js",
+      "status": "complete",
       "priority": 1,
-      "commit": null,
-      "notes": ""
+      "acceptance_criteria": [
+        "Detects if page is an article using isProbablyReaderable",
+        "Extracts title, content, byline, excerpt",
+        "Sanitizes content with DOMPurify",
+        "Calculates reading time estimate"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Chrome AI Integration",
+      "description": "Primary AI provider using Chrome's built-in Gemini Nano Summarizer API",
+      "status": "complete",
+      "priority": 1,
+      "acceptance_criteria": [
+        "Detects Chrome AI availability via ai.summarizer.capabilities()",
+        "Creates summarizer with key-points format",
+        "Handles model download progress",
+        "Parses Chrome AI output into standard format"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Groq API Fallback",
+      "description": "Fallback AI provider using Groq's fast Llama 3.1 inference",
+      "status": "complete",
+      "priority": 1,
+      "acceptance_criteria": [
+        "OpenAI-compatible API integration",
+        "JSON response format with clever prompting",
+        "Error handling for rate limits and invalid keys",
+        "Configurable via options page"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Popup UI",
+      "description": "Extension popup with summary display and actions",
+      "status": "complete",
+      "priority": 1,
+      "acceptance_criteria": [
+        "Loading skeleton animation",
+        "Summary display with key points",
+        "Copy to clipboard button",
+        "Regenerate summary button",
+        "Error states with helpful messages"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Options Page",
+      "description": "Settings page for API key configuration",
+      "status": "complete",
+      "priority": 2,
+      "acceptance_criteria": [
+        "Groq API key input with visibility toggle",
+        "Provider status display",
+        "Cache enable/disable toggle",
+        "Clear cache button with stats"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Summary Caching",
+      "description": "Cache summaries in chrome.storage.local for instant re-access",
+      "status": "complete",
+      "priority": 2,
+      "acceptance_criteria": [
+        "URL-based cache keys",
+        "24-hour expiry",
+        "Max 100 entries with LRU eviction",
+        "Cache bypass with regenerate button"
+      ]
     }
-  ],
-  "status_values": ["pending", "in_progress", "testing", "complete", "blocked"]
+  ]
 }

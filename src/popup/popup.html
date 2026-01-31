@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLDR</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">TLDR</h1>
+      <button class="settings-btn" id="settingsBtn" title="Settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- States Container -->
+    <main class="main">
+      <!-- Loading State -->
+      <div class="state state--loading" id="loadingState">
+        <div class="skeleton skeleton--title"></div>
+        <div class="skeleton skeleton--meta"></div>
+        <div class="skeleton skeleton--summary"></div>
+        <div class="skeleton skeleton--bullet"></div>
+        <div class="skeleton skeleton--bullet"></div>
+        <div class="skeleton skeleton--bullet"></div>
+        <p class="loading-text">Summarizing article...</p>
+      </div>
+
+      <!-- Success State -->
+      <div class="state state--success hidden" id="successState">
+        <div class="article-info">
+          <h2 class="article-title" id="articleTitle"></h2>
+          <p class="article-meta" id="articleMeta"></p>
+        </div>
+
+        <div class="summary-section">
+          <div class="summary-header">
+            <span class="summary-icon">💡</span>
+            <span class="summary-label">The Gist</span>
+          </div>
+          <p class="summary-text" id="summaryText"></p>
+        </div>
+
+        <div class="key-points" id="keyPointsSection">
+          <ul class="key-points-list" id="keyPointsList"></ul>
+        </div>
+
+        <div class="provider-badge" id="providerBadge"></div>
+      </div>
+
+      <!-- Not Article State -->
+      <div class="state state--not-article hidden" id="notArticleState">
+        <div class="state-icon">📄</div>
+        <h3 class="state-title">Not an Article</h3>
+        <p class="state-message">This page doesn't look like an article. TLDR works best on blog posts, news articles, and long-form content.</p>
+      </div>
+
+      <!-- Error State -->
+      <div class="state state--error hidden" id="errorState">
+        <div class="state-icon">⚠️</div>
+        <h3 class="state-title" id="errorTitle">Something went wrong</h3>
+        <p class="state-message" id="errorMessage"></p>
+        <button class="btn btn--secondary" id="retryBtn">Try Again</button>
+      </div>
+
+      <!-- No Provider State - Grandma Friendly! -->
+      <div class="state state--no-provider hidden" id="noProviderState">
+        <div class="welcome-emoji">👋</div>
+        <h3 class="welcome-title">Welcome to TLDR!</h3>
+        <p class="welcome-subtitle">Let's get you set up in 30 seconds</p>
+
+        <div class="setup-steps">
+          <div class="setup-step">
+            <span class="step-number">1</span>
+            <span class="step-text">Click button below → Sign up free</span>
+          </div>
+          <div class="setup-step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <span class="step-text">Create API Key:</span>
+              <span class="step-detail">Name: <code>TLDR</code> · Expiration: <code>No expiration</code></span>
+            </div>
+          </div>
+          <div class="setup-step">
+            <span class="step-number">3</span>
+            <span class="step-text">Copy key → Paste in Settings (⚙️)</span>
+          </div>
+        </div>
+
+        <a href="https://console.groq.com/keys" target="_blank" rel="noopener" class="btn btn--primary btn--large" id="getKeyBtn">
+          🔑 Get Your Free API Key
+        </a>
+
+        <button class="btn btn--secondary" id="setupBtn">I already have a key</button>
+      </div>
+    </main>
+
+    <!-- Actions (only visible on success) -->
+    <footer class="actions hidden" id="actionsFooter">
+      <button class="btn btn--icon" id="copyBtn" title="Copy summary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span>Copy</span>
+      </button>
+      <button class="btn btn--icon" id="regenerateBtn" title="Regenerate summary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6M1 20v-6h6"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+        <span>Regenerate</span>
+      </button>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

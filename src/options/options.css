@@ -1,0 +1,477 @@
+/* ============================================
+   TLDR Extension - Options Page Styles
+   Grandma-friendly Edition
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-light: #e0e7ff;
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --error: #ef4444;
+  --error-light: #fee2e2;
+  --border: #e2e8f0;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ============================================
+   Sections
+   ============================================ */
+
+.section {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section--hero {
+  border: 2px solid var(--accent-light);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.section-description {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* ============================================
+   Hero Status
+   ============================================ */
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--bg-tertiary);
+  border-radius: 999px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+}
+
+.status-dot--active {
+  background: var(--success);
+  box-shadow: 0 0 0 3px var(--success-light);
+}
+
+.status-dot--inactive {
+  background: var(--text-muted);
+}
+
+.status-label {
+  color: var(--text-secondary);
+}
+
+.hero-status.connected {
+  background: var(--success-light);
+}
+
+.hero-status.connected .status-label {
+  color: var(--success);
+}
+
+/* ============================================
+   Setup Guide
+   ============================================ */
+
+.setup-guide {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.guide-step:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.guide-content {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.guide-text {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.guide-step:last-child .guide-text {
+  margin-bottom: 0;
+}
+
+.guide-details {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.guide-details li {
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.guide-details li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.guide-details code {
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input--large {
+  padding: 14px 16px;
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Toggle Switch */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--border);
+  border-radius: 12px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .toggle-slider {
+  background: var(--accent);
+}
+
+.toggle input:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Cache Info */
+.cache-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  margin-top: 16px;
+}
+
+.cache-info p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn--secondary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--border);
+}
+
+.btn--icon {
+  padding: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.btn--icon:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.btn--sm {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.btn--full {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+}
+
+/* ============================================
+   Details (Collapsible)
+   ============================================ */
+
+.section--details {
+  padding: 0;
+}
+
+.details-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.details-summary svg {
+  transition: transform 0.2s;
+}
+
+details[open] .details-summary svg {
+  transform: rotate(180deg);
+}
+
+.details-content {
+  padding: 0 24px 24px;
+}
+
+/* ============================================
+   Save Status
+   ============================================ */
+
+.save-status {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 12px;
+  min-height: 20px;
+}
+
+.save-status.success {
+  color: var(--success);
+}
+
+.save-status.error {
+  color: var(--error);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 16px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .cache-info {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
