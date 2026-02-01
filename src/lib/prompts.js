@@ -56,28 +56,28 @@ export const TONE_PRESETS = {
 };
 
 // Length presets tuned based on test results:
-// - One-liner was hitting 15 words (target: 20) → added minimum
-// - Brief was hitting 21 words (target: 35) → explicit range with minimum
-// - Detailed was hitting 63 words (target: 70) → added explicit range
+// - Model tends to produce short outputs; aggressively specify minimums
+// - Use stronger language: "MUST", "NEVER", "AT LEAST"
+// - Specify sentence counts to force expansion
 export const LENGTH_PRESETS = {
   'one-liner': {
     name: 'One-liner',
     description: '~18-22 words',
-    instruction: 'Summarize in exactly ONE punchy sentence. Use 18-22 words (not fewer). Pack meaning into every word.',
+    instruction: 'Write exactly ONE complete sentence with 18-22 words. NEVER use fewer than 18 words. If too short, add relevant context or detail.',
     maxTokens: 100,
     targetWords: 20,
   },
   brief: {
     name: 'Brief',
     description: '~30-40 words',
-    instruction: 'Summarize in 2 complete sentences. Use 30-40 words (NOT fewer than 30). Provide enough context to understand the main point and its significance.',
+    instruction: 'Write EXACTLY 2-3 complete sentences totaling 30-40 words. You MUST use AT LEAST 30 words. If your first draft is shorter, expand with context, significance, or relevant details.',
     maxTokens: 200,
     targetWords: 35,
   },
   detailed: {
     name: 'Detailed',
     description: '~60-80 words',
-    instruction: 'Provide a thorough summary in 3-4 sentences. Use 60-80 words. Include context, nuance, key implications, and why it matters.',
+    instruction: 'Write 4-5 complete sentences totaling 60-80 words. You MUST use AT LEAST 60 words. Cover: main point, key evidence/details, context, and implications. Expand with specifics.',
     maxTokens: 400,
     targetWords: 70,
   },
@@ -180,7 +180,7 @@ CRITICAL RULES for your summaries:
 1. HONEST: Never misrepresent or exaggerate the article's actual content
 2. VARIED OPENINGS: NEVER start with "[Topic] is..." or "[Topic] are..." - this is boring and repetitive
 3. ENGAGING: Capture attention from the first word
-4. HIT THE WORD COUNT: Meet the minimum word requirement - don't be too brief
+4. HIT THE WORD COUNT: You MUST meet the MINIMUM word count specified above. Count your words. If under the minimum, ADD more context, details, or implications until you reach it. Being too brief is a FAILURE.
 
 Opening strategies (pick one):
 - Lead with the most surprising finding or statistic

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "TLDR - Article Summarizer",
   "version": "1.0.0",
-  "description": "One-click clever summaries for any article. Powered by Chrome AI with smart fallbacks.",
+  "description": "Get the gist of any article in seconds. AI-powered summaries with customizable tone, length, and focus.",
 
   "permissions": [
     "activeTab",
