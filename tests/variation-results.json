@@ -1,0 +1,1396 @@
+{
+  "startTime": "2026-01-31T10:04:05.828Z",
+  "config": {
+    "urls": 34,
+    "regenerations": 5,
+    "full": false
+  },
+  "temperatureSweep": [
+    {
+      "category": "Artificial_intelligence",
+      "title": "Artificial intelligence",
+      "results": {
+        "1": {
+          "summary": "AI is the ability of machines to mimic human intelligence, solving complex tasks through learning, reasoning, and decision-making.",
+          "length": 130,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Artificial intelligence (AI) enables machines to learn, reason, and make decisions like humans, with applications in search, virtual assistants, and autonomous vehicles.",
+          "length": 169,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Artificial intelligence (AI) is the ability of machines to think and act like humans, with applications ranging from search engines to autonomous vehicles. The field has experienced cycles of optimism and disappointment, but recent advancements in deep learning have led to rapid progress.",
+          "length": 289,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "AI's goal is to mimic human intelligence, but its rapid progress has sparked both excitement and concern over ethics, safety, and potential existential risks.",
+          "length": 158,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Artificial intelligence enables machines to perform tasks typically associated with human intelligence, from web search to game-playing, but it also raises concerns about regulation and existential risks.",
+          "length": 204,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Machine_learning",
+      "title": "Machine learning",
+      "results": {
+        "1": {
+          "summary": "Machine learning uses statistical algorithms to learn from data and solve problems without explicit instructions. From self-teaching computers to deep learning breakthroughs, it's been a long journey.",
+          "length": 200,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Machine learning is a subset of AI that enables computers to learn from data and perform tasks without explicit instructions, with applications in various fields.",
+          "length": 162,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Machine learning is a subset of AI that enables computers to learn from data, perform tasks without explicit instructions, and improve performance over time.",
+          "length": 157,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "Machine learning is all about algorithms that learn from data and get better with experience. It's like teaching a super-smart computer to think for itself.",
+          "length": 156,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Machine learning, a subset of AI, lets computers learn from data, generalize, and perform tasks without explicit instructions.",
+          "length": 126,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Quantum_computing",
+      "title": "Quantum computing",
+      "results": {
+        "1": {
+          "summary": "Quantum computing makes some calculations exponentially faster than classical computers, but the tech is still in its infancy",
+          "length": 125,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Quantum computers can solve some problems exponentially faster than classical computers, but current hardware is still experimental and not practical for real-world use.",
+          "length": 169,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Quantum computers can solve problems exponentially faster than classical computers, but are still largely experimental and prone to errors.",
+          "length": 139,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "Quantum computers can theoretically solve problems exponentially faster, but current hardware is experimental and prone to errors.",
+          "length": 130,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Scientists are racing to create usable quantum computers, which could solve some problems exponentially faster than classical computers, but are still years away from real-world applications.",
+          "length": 191,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Blockchain",
+      "title": "Blockchain",
+      "results": {
+        "1": {
+          "summary": "Blockchain is a decentralized digital ledger linking blocks of records via cryptographic hashes, resistant to alteration due to its linked, timestamped structure.",
+          "length": 162,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Blockchain: a secure, decentralized ledger of records linked by cryptography, resistant to alteration and tampering.",
+          "length": 116,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Blockchain is a decentralized, digital ledger that records transactions across many computers, making it resistant to alteration and ensuring data security.",
+          "length": 156,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "Blockchain is a secure, distributed ledger using cryptographic hashes, timestamps, and Merkle trees to record transactions; its design has evolved from early proposals to its use in cryptocurrencies like Bitcoin.",
+          "length": 212,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "A blockchain is a secure, decentralized ledger of records that use cryptography to prevent alteration, first conceived by Satoshi Nakamoto in 2008.",
+          "length": 147,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Cryptocurrency",
+      "title": "Cryptocurrency",
+      "results": {
+        "1": {
+          "summary": "Cryptocurrencies are digital currencies relying on decentralization, with over 25,000 existing, and a market capitalization of $2.8 trillion.",
+          "length": 141,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Cryptocurrency is a digital currency not reliant on central authorities, stored in a blockchain ledger with varying consensus mechanisms.",
+          "length": 137,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Cryptocurrency is a digital currency not reliant on central authority, using a blockchain for secure transactions and control.",
+          "length": 126,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "Cryptocurrency is a decentralized digital currency stored in a blockchain, with over 25,000 types and a market cap of $2.8 trillion.",
+          "length": 132,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Cryptocurrencies are digital, decentralized currencies stored on a blockchain. They've been around since 1983, with over 25,000 in existence today.",
+          "length": 147,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "5G",
+      "title": "5G",
+      "results": {
+        "1": {
+          "summary": "5G is here: faster speeds (up to 10 Gbit/s), lower latency (just milliseconds), and a ton of new features for everything from smart homes to surgery.",
+          "length": 149,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "5G is the fifth generation of cellular network tech, offering faster speeds (up to 10 Gbit/s) and lower latency, enabling widespread adoption in industries like healthcare, transportation, and smart manufacturing.",
+          "length": 213,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "5G is here, and it's a game-changer with speeds up to 10 Gbit/s and latency as low as a few milliseconds.",
+          "length": 105,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "5G is the fifth generation of cellular tech, offering speeds up to 10 Gbit/s, lower latency, and supporting more users and IoT devices.",
+          "length": 135,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "5G networks revolutionizing speed (up to 10 Gbit/s) and latency (milliseconds) with support for IoT, VR, and more.",
+          "length": 114,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Internet_of_things",
+      "title": "Internet of things",
+      "results": {
+        "1": {
+          "summary": "The Internet of Things (IoT) connects devices via sensors, processing, and software, with applications in smart homes, industrial sectors, and more, but raises concerns about security and privacy.",
+          "length": 196,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "The Internet of Things (IoT) connects devices via sensors, processing, and software, with applications in smart homes, industrial monitoring, and asset tracking, but raises concerns over privacy and security.",
+          "length": 208,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "IoT connects everyday objects via sensors, processing, and networks, with applications in smart homes, industrial monitoring, and fleet management, but raises concerns over security and privacy.",
+          "length": 194,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "The Internet of Things (IoT) connects devices via sensors, processing ability, and data exchange, with applications in smart homes, industries, and healthcare, but raises concerns about privacy and security.",
+          "length": 207,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "IoT connects devices, people and things through data exchange, with smart homes being a small part of a much larger business and industrial market.",
+          "length": 147,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "CRISPR_gene_editing",
+      "title": "CRISPR gene editing",
+      "results": {
+        "1": {
+          "summary": "CRISPR gene editing is a precise and cost-effective technique that enables the modification of living organisms' genomes, holding promise for treating genetic diseases and creating new medicines.",
+          "length": 195,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "CRISPR-Cas9 revolutionizes gene editing with precision, efficiency, and low cost, opening doors to new medicines, agricultural products, and disease treatments.",
+          "length": 160,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "CRISPR-Cas9 gene editing revolutionizes biotech and medicine with precise, cost-effective genome editing, but raises concerns about human germline modification.",
+          "length": 160,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "CRISPR gene editing is a precise, cost-effective technique that enables in vivo genome editing, with potential applications in medicine, agriculture, and more.",
+          "length": 159,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "CRISPR-Cas9 revolutionizes genome editing with precision, efficiency, and affordability, opening doors to medical breakthroughs and agricultural innovations while sparking bioethical debates.",
+          "length": 191,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Black_hole",
+      "title": "Black hole",
+      "results": {
+        "1": {
+          "summary": "Black holes are incredibly dense bodies where gravity is so strong that not even light can escape, with the event horizon marking the point of no return.",
+          "length": 153,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Black holes are cosmic vacuum cleaners that warp space and time, predicted by Einstein's general relativity and confirmed by observations of stellar and supermassive black holes.",
+          "length": 178,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Black holes are cosmic vacuum cleaners, warping spacetime and crushing everything, including light, with gravity so strong it can't escape.",
+          "length": 139,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "A black hole warps spacetime, trapping objects with gravity so strong it can't escape, even light. Scientists predicted them using Einstein's general relativity in the 1910s.",
+          "length": 174,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Black holes are incredibly dense objects with gravity so strong that not even light can escape, discovered by Einstein's general relativity theory.",
+          "length": 147,
+          "badPatterns": 0
+        }
+      }
+    },
+    {
+      "category": "Mars_exploration",
+      "title": "Exploration of Mars",
+      "results": {
+        "1": {
+          "summary": "Mars has been explored by 59% of spacecraft that failed, but still gave us amazing insights.",
+          "length": 92,
+          "badPatterns": 0
+        },
+        "0.3": {
+          "summary": "Mars has been explored by 60% of failed spacecraft, but 2 rovers and 7 orbiters are still active, with more missions planned.",
+          "length": 125,
+          "badPatterns": 0
+        },
+        "0.5": {
+          "summary": "Mars has been explored by over 60 spacecraft, with 2 functional rovers and 7 orbiters currently active, despite a 60% failure rate in early attempts.",
+          "length": 149,
+          "badPatterns": 0
+        },
+        "0.7": {
+          "summary": "Despite high failure rates, Mars exploration has made significant strides, with 2 rovers and 7 orbiters currently active, and plans for commercial services and sample return missions.",
+          "length": 183,
+          "badPatterns": 0
+        },
+        "0.9": {
+          "summary": "Mars exploration has come a long way, with 9 functioning vehicles, including 2 rovers and 7 orbiters, studying the Red Planet and planning for sample return missions.",
+          "length": 166,
+          "badPatterns": 0
+        }
+      }
+    }
+  ],
+  "toneSweep": [
+    {
+      "category": "Artificial_intelligence",
+      "title": "Artificial intelligence",
+      "results": {
+        "witty": {
+          "summary": "AI is the field of research in computer science that enables machines to perform tasks like learning, reasoning, and problem-solving, with applications ranging from web search engines to autonomous vehicles.",
+          "length": 207
+        },
+        "professional": {
+          "summary": "Artificial intelligence is the capability of computational systems to perform tasks typically associated with human intelligence, with applications in various fields and ongoing research to address challenges and ethics.",
+          "length": 220
+        },
+        "casual": {
+          "summary": "Artificial intelligence (AI) is the capability of computational systems to perform human-like tasks, such as learning, reasoning, and decision-making, with various subfields centered around particular goals and tools.",
+          "length": 217
+        },
+        "academic": {
+          "summary": "Artificial intelligence research involves developing methods and software enabling machines to perceive, learn, and make decisions, with various subfields focused on goals like reasoning, knowledge representation, and planning.",
+          "length": 227
+        }
+      }
+    },
+    {
+      "category": "Machine_learning",
+      "title": "Machine learning",
+      "results": {
+        "witty": {
+          "summary": "Machine learning lets computers learn from data, generalizing to new situations without explicit instructions. Its roots date back to 1949, with pioneers like Hebb and McCulloch.",
+          "length": 178
+        },
+        "professional": {
+          "summary": "Machine learning is a field of AI that enables computers to learn from data and make decisions without explicit instructions, applying to various fields including business, medicine, and agriculture.",
+          "length": 199
+        },
+        "casual": {
+          "summary": "Machine learning is a field of AI that uses statistical algorithms to learn from data and perform tasks without explicit instructions.",
+          "length": 134
+        },
+        "academic": {
+          "summary": "Machine learning is a subset of artificial intelligence that enables computers to learn from data and generalize to unseen data, with applications in various fields such as natural language processing, computer vision, and predictive analytics.",
+          "length": 244
+        }
+      }
+    },
+    {
+      "category": "Quantum_computing",
+      "title": "Quantum computing",
+      "results": {
+        "witty": {
+          "summary": "Quantum computers can solve some problems exponentially faster, but they're still in the experimental phase due to challenges with qubit engineering.",
+          "length": 149
+        },
+        "professional": {
+          "summary": "Quantum computers can perform certain calculations exponentially faster than classical computers, but current implementations are experimental and not yet practical for real-world applications.",
+          "length": 193
+        },
+        "casual": {
+          "summary": "Quantum computers can perform calculations exponentially faster than classical computers, but current hardware is experimental and only suitable for specialized tasks.",
+          "length": 167
+        },
+        "academic": {
+          "summary": "Quantum computers exploit superposed and entangled states to perform calculations exponentially faster than classical computers, but current hardware implementations are largely experimental and prone to errors.",
+          "length": 211
+        }
+      }
+    },
+    {
+      "category": "Blockchain",
+      "title": "Blockchain",
+      "results": {
+        "witty": {
+          "summary": "Blockchain is a secure, distributed ledger linking blocks of transactions via hashes, making data tampering nearly impossible.",
+          "length": 126
+        },
+        "professional": {
+          "summary": "A blockchain is a secure, distributed ledger of records (blocks) linked via cryptographic hashes, resistant to alteration and tampering.",
+          "length": 136
+        },
+        "casual": {
+          "summary": "A blockchain is a secure, decentralized digital ledger that records transactions across a network of computers, resistant to alteration and tampering.",
+          "length": 150
+        },
+        "academic": {
+          "summary": "A blockchain is a distributed ledger of secure, linked blocks containing transaction data, resistant to alteration and exemplifying a distributed computing system.",
+          "length": 163
+        }
+      }
+    },
+    {
+      "category": "Cryptocurrency",
+      "title": "Cryptocurrency",
+      "results": {
+        "witty": {
+          "summary": "Cryptocurrency is a decentralised digital currency not reliant on central authorities, with over 25,000 types and a combined market capitalisation of $2.8 trillion.",
+          "length": 164
+        },
+        "professional": {
+          "summary": "Cryptocurrency is a digital currency that uses a decentralized system with a blockchain ledger, not relying on central authorities, and has over 25,000 variants as of June 2023.",
+          "length": 177
+        },
+        "casual": {
+          "summary": "Cryptocurrencies are digital currencies that use a decentralized network, blockchain, and consensus mechanisms like proof of work or stake, with over 25,000 types in existence, and a market capitalization of $2.8 trillion.",
+          "length": 222
+        },
+        "academic": {
+          "summary": "A cryptocurrency is a digital currency that uses a decentralized system, blockchain, and consensus mechanisms like proof of work or proof of stake. Over 25,000 cryptocurrencies exist, with some countries recognizing them as legal tender.",
+          "length": 237
+        }
+      }
+    },
+    {
+      "category": "5G",
+      "title": "5G",
+      "results": {
+        "witty": {
+          "summary": "5G is here, bringing faster speeds and lower latency to cellular networks, supporting the Internet of Things, extended reality, and more. Rollout costs are high, but analysts expect growth in telehealth and smart transport.",
+          "length": 223
+        },
+        "professional": {
+          "summary": "5G is the fifth generation of cellular network technology, offering faster data transfer speeds and lower latency than 4G, with deployment starting in 2019 and expanding rapidly through 2020.",
+          "length": 191
+        },
+        "casual": {
+          "summary": "5G is the fifth generation of cellular network technology, launched in 2019, offering faster data transfer speeds and lower latency to support new applications and IoT devices.",
+          "length": 176
+        },
+        "academic": {
+          "summary": "5G is the fifth generation of cellular network technology, offering faster data transfer speeds and lower latency, supporting applications like extended reality, autonomous vehicles, and the Internet of Things.",
+          "length": 210
+        }
+      }
+    },
+    {
+      "category": "Internet_of_things",
+      "title": "Internet of things",
+      "results": {
+        "witty": {
+          "summary": "The Internet of Things (IoT) is a network of devices that connect and exchange data, initially misnamed due to its non-reliance on the public internet.",
+          "length": 151
+        },
+        "professional": {
+          "summary": "The Internet of Things (IoT) connects devices with sensors and processing ability to exchange data over networks, with applications in business, industry, and consumer sectors.",
+          "length": 176
+        },
+        "casual": {
+          "summary": "The Internet of Things (IoT) connects physical objects with sensors and technologies to exchange data, with applications in smart homes, industrial monitoring, and commercial asset tracking.",
+          "length": 190
+        },
+        "academic": {
+          "summary": "The Internet of Things (IoT) is a network of physical devices connected and exchanging data through sensors, processing ability, and communication technologies.",
+          "length": 160
+        }
+      }
+    },
+    {
+      "category": "CRISPR_gene_editing",
+      "title": "CRISPR gene editing",
+      "results": {
+        "witty": {
+          "summary": "CRISPR-Cas9 gene editing is a precise, efficient, and cost-effective tech that lets us snip, flip, and replace DNA in living organisms, with potential cures for inherited diseases and more.",
+          "length": 189
+        },
+        "professional": {
+          "summary": "CRISPR-Cas9 gene editing is a precise, efficient, and cost-effective technique that enables in vivo genome modification, with potential applications in medicine, agriculture, and biotechnology.",
+          "length": 193
+        },
+        "casual": {
+          "summary": "CRISPR gene editing is a precise, cost-effective technique that enables targeted genome modification, with potential applications in medicine, agriculture, and biotechnology.",
+          "length": 174
+        },
+        "academic": {
+          "summary": "CRISPR-Cas9 is a genetic engineering technique that enables precise, cost-effective, and efficient genome editing in living organisms, with potential applications in medicine, agriculture, and biotechnology.",
+          "length": 207
+        }
+      }
+    },
+    {
+      "category": "Black_hole",
+      "title": "Black hole",
+      "results": {
+        "witty": {
+          "summary": "A black hole's gravity is so strong, not even light can escape. They form when massive stars collapse and can grow by absorbing other matter.",
+          "length": 141
+        },
+        "professional": {
+          "summary": "A black hole is an astronomical body so compact that its gravity prevents anything, including light, from escaping, with its boundary called the event horizon.",
+          "length": 159
+        },
+        "casual": {
+          "summary": "Black holes are incredibly dense objects with gravity so strong, not even light can escape, formed when massive stars collapse, and can be inferred by observing their effects on surrounding matter and radiation.",
+          "length": 211
+        },
+        "academic": {
+          "summary": "A black hole is a cosmic body with gravity so strong that not even light can escape, predicted by Einstein's general relativity, and characterized by an event horizon and a central singularity.",
+          "length": 193
+        }
+      }
+    },
+    {
+      "category": "Mars_exploration",
+      "title": "Exploration of Mars",
+      "results": {
+        "witty": {
+          "summary": "Mars has been extensively explored by spacecraft since the 1960s, with 11 rovers and 7 orbiters currently active or planned, yielding a large increase in knowledge about the Martian system.",
+          "length": 189
+        },
+        "professional": {
+          "summary": "There have been 69 active Mars missions between 1997 and 2023, with 9 currently exploring the planet, including 2 rovers and 7 orbiters.",
+          "length": 136
+        },
+        "casual": {
+          "summary": "NASA's Curiosity and Perseverance rovers, along with several orbiters, are currently exploring Mars, while China's Zhurong rover remains inactive.",
+          "length": 146
+        },
+        "academic": {
+          "summary": "Active Mars missions have been ongoing since 1997, with 9 vehicles currently exploring the planet, including 2 rovers and 7 orbiters.",
+          "length": 133
+        }
+      }
+    }
+  ],
+  "lengthSweep": [
+    {
+      "category": "Artificial_intelligence",
+      "title": "Artificial intelligence",
+      "results": {
+        "one-liner": {
+          "summary": "AI has evolved from a field of research to a ubiquitous technology with far-reaching implications.",
+          "length": 98,
+          "wordCount": 15
+        },
+        "brief": {
+          "summary": "AI is the capability of machines to perform tasks like learning, reasoning, and problem-solving, with subfields including natural language processing and robotics.",
+          "length": 163,
+          "wordCount": 22
+        },
+        "detailed": {
+          "summary": "Artificial intelligence is the capability of computational systems to perform human-like tasks, like learning, reasoning, and problem-solving. The field has made significant progress since its founding in 1956, but also raises concerns about long-term effects and potential existential risks. Current research focuses on developing techniques like deep learning and generative AI, which have led to breakthroughs but also unintended consequences.",
+          "length": 446,
+          "wordCount": 60
+        }
+      }
+    },
+    {
+      "category": "Machine_learning",
+      "title": "Machine learning",
+      "results": {
+        "brief": {
+          "summary": "Machine learning: a field where computers learn from data, outsmarting humans with algorithms like deep learning and reinforcement learning.",
+          "length": 140,
+          "wordCount": 19
+        },
+        "detailed": {
+          "summary": "Machine learning is the art of teaching computers to learn from experience, with roots dating back to 1949 and evolving through the development of neural networks, deep learning, and statistical algorithms. From pattern recognition to predictive analytics, machine learning has become a crucial tool in various fields, including natural language processing, computer vision, and medicine. Today, machine learning algorithms are categorized into three types: supervised, unsupervised, and reinforcement learning, each with its own objectives and applications.",
+          "length": 558,
+          "wordCount": 76
+        }
+      }
+    },
+    {
+      "category": "Quantum_computing",
+      "title": "Quantum computing",
+      "results": {
+        "brief": {
+          "summary": "Quantum computers can crunch calculations exponentially faster than classical ones, but we're still far from practical applications.",
+          "length": 132,
+          "wordCount": 17
+        },
+        "detailed": {
+          "summary": "Quantum computing is a field that's been years in the making, but it's still in its experimental phase. Despite the promise of exponentially faster calculations, current hardware is only suitable for specialized tasks due to challenges in physically engineering high-quality qubits. However, researchers have made significant progress, including achieving quantum supremacy with a 54-qubit machine in 2019, which outperformed any classical computer on a specific task.",
+          "length": 468,
+          "wordCount": 66
+        }
+      }
+    },
+    {
+      "category": "Blockchain",
+      "title": "Blockchain",
+      "results": {
+        "one-liner": {
+          "summary": "Blockchain is a secure, decentralized digital ledger that records transactions across many computers without alteration",
+          "length": 119,
+          "wordCount": 15
+        },
+        "brief": {
+          "summary": "A blockchain is a secure, decentralized digital ledger that records transactions across many computers, making it resistant to alteration and perfect for cryptocurrencies.",
+          "length": 171,
+          "wordCount": 23
+        },
+        "detailed": {
+          "summary": "Blockchain is a distributed ledger of cryptographically linked blocks that ensures secure, transparent, and tamper-proof transactions. Its decentralized nature relies on a peer-to-peer network and consensus algorithms to validate new blocks. From its humble beginnings as a timestamping system to its current widespread adoption in finance, blockchain technology has revolutionized the way we think about data security and transactions.",
+          "length": 436,
+          "wordCount": 59
+        }
+      }
+    },
+    {
+      "category": "Cryptocurrency",
+      "title": "Cryptocurrency",
+      "results": {
+        "brief": {
+          "summary": "Cryptocurrency is a decentralized digital currency stored in a blockchain, with over 25,000 types, including stablecoins, and a market capitalization of $2.8 trillion.",
+          "length": 167,
+          "wordCount": 23
+        },
+        "detailed": {
+          "summary": "Cryptocurrency is a digital currency that operates outside traditional central authority, stored in a decentralized ledger called a blockchain. Its first iteration, Bitcoin, was released in 2009, with over 25,000 alternative cryptocurrencies emerging since. Despite market fluctuations, cryptocurrency has become a distinct asset class, with varying legal treatments and a global market capitalization of $2.8 trillion.",
+          "length": 419,
+          "wordCount": 56
+        }
+      }
+    },
+    {
+      "category": "5G",
+      "title": "5G",
+      "results": {
+        "brief": {
+          "summary": "5G is the 5th gen of cellular tech, deployed in 2019, offering speeds up to 10 Gbit/s and lower latency for IoT, AR, and more.",
+          "length": 126,
+          "wordCount": 25
+        },
+        "detailed": {
+          "summary": "5G has arrived, bringing with it mind-boggling speeds and latency so low you'll wonder if your device is secretly a supercomputer. Commercial deployments began in 2019 and have since rolled out globally, with major players like Samsung, Ericsson, and Huawei vying for dominance. As the technology continues to evolve, we're seeing the emergence of 5.5G and the widespread adoption of 5G in developed and developing markets.",
+          "length": 423,
+          "wordCount": 66
+        }
+      }
+    },
+    {
+      "category": "Internet_of_things",
+      "title": "Internet of things",
+      "results": {
+        "brief": {
+          "summary": "The Internet of Things (IoT) connects devices through sensors, processing, and software, but its growth raises concerns about privacy and security.",
+          "length": 147,
+          "wordCount": 21
+        },
+        "detailed": {
+          "summary": "The Internet of Things (IoT) is a network of connected devices that exchange data with other systems over the Internet or private networks, encompassing electronics, communication, and computer science engineering. While initially associated with smart home products, IoT technology has significant applications in business and industrial sectors, including asset tracking, industrial monitoring, and connected healthcare. However, concerns about security, privacy, and regulatory ambiguities have led to the development of standards, guidelines, and regulatory frameworks to address these issues.",
+          "length": 597,
+          "wordCount": 78
+        }
+      }
+    },
+    {
+      "category": "CRISPR_gene_editing",
+      "title": "CRISPR gene editing",
+      "results": {
+        "one-liner": {
+          "summary": "CRISPR gene editing is a precise, cost-effective technique for modifying living organisms' genomes.",
+          "length": 99,
+          "wordCount": 13
+        },
+        "brief": {
+          "summary": "CRISPR-Cas9 revolutionizes genetics with precise, efficient genome editing, opening doors to new medicines, agriculture, and treatments for inherited diseases.",
+          "length": 159,
+          "wordCount": 19
+        },
+        "detailed": {
+          "summary": "CRISPR-Cas9 gene editing is a precise, cost-effective technique that enables researchers to modify living organisms' genomes. It has potential applications in medicine, agriculture, and biotechnology, but raises concerns about germline editing and human eugenics. The discovery earned Jennifer Doudna and Emmanuelle Charpentier the Nobel Prize in Chemistry in 2020. CRISPR-based methods are now widely used, including the recent approval of the first CRISPR gene therapy, Exagamglogene autotemcel, to treat sickle-cell disease and beta thalassemia.",
+          "length": 548,
+          "wordCount": 74
+        }
+      }
+    },
+    {
+      "category": "Black_hole",
+      "title": "Black hole",
+      "results": {
+        "one-liner": {
+          "summary": "A black hole is a cosmic sinkhole where gravity is so strong, not even light can escape.",
+          "length": 88,
+          "wordCount": 17
+        },
+        "brief": {
+          "summary": "Black holes are cosmic vacuum cleaners with gravity so strong, not even light escapes – a prediction of Einstein's general relativity.",
+          "length": 134,
+          "wordCount": 21
+        },
+        "detailed": {
+          "summary": "Black holes are cosmic sinkholes where gravity's so strong not even light escapes. The concept dates back to the 18th century, but Einstein's general relativity made them a mathematical certainty. Today, scientists confirm black holes in most galaxies, from stellar monsters to supermassive behemoths.",
+          "length": 301,
+          "wordCount": 44
+        }
+      }
+    },
+    {
+      "category": "Mars_exploration",
+      "title": "Exploration of Mars",
+      "results": {
+        "one-liner": {
+          "summary": "Mars has been blasted by 60% of failed space missions, but robots keep rolling (and orbiting) on.",
+          "length": 97,
+          "wordCount": 17
+        },
+        "brief": {
+          "summary": "Mars exploration has yielded a wealth of knowledge, despite a 60% failure rate, with multiple rovers and orbiters currently active.",
+          "length": 131,
+          "wordCount": 20
+        },
+        "detailed": {
+          "summary": "Mars has been explored by about 130 missions since the 1960s, with roughly 60% of them failing. Despite this, we've gained a wealth of knowledge about the planet's geology and habitability. Currently, 2 rovers and 7 orbiters are actively exploring Mars, with plans for sample return missions and commercial services.",
+          "length": 316,
+          "wordCount": 50
+        }
+      }
+    }
+  ],
+  "focusSweep": [],
+  "articles": [
+    {
+      "category": "Artificial_intelligence",
+      "title": "Artificial intelligence",
+      "summaries": [
+        "Artificial intelligence simulates human-like intelligence, with applications in web search, virtual assistants, and autonomous vehicles, but raises concerns about existential risks and regulatory policies.",
+        "AI is the field of research that creates machines to perform tasks like learning, problem-solving, and decision-making, with goals ranging from simulating intelligence to creating superhuman abilities.",
+        "Artificial intelligence is the ability of machines to perform tasks like learning, problem-solving, and decision-making, with various subfields focused on goals like reasoning, knowledge representation, and planning.",
+        "Artificial intelligence is the ability of machines to perform tasks that humans typically do, like learning and decision-making. But it's gotten so good, many AI applications go unnoticed.",
+        "Artificial intelligence mimics human intelligence, enabling machines to learn, reason, and solve problems, with applications ranging from search engines to autonomous vehicles."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.18186555319359504,
+        "diversity": 0.8181344468064049,
+        "min": 0.07317073170731707,
+        "max": 0.3870967741935484
+      },
+      "avgWordCount": 25.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Machine_learning",
+      "title": "Machine learning",
+      "summaries": [
+        "Machine learning is a subset of AI, which teaches computers to learn from data without explicit instructions, and has applications in fields like natural language processing and predictive analytics.",
+        "Machine learning is AI's self-taught sibling, born in 1959, and now mastering our worlds with neural networks and algorithms.",
+        "Machine learning is AI's brainy sibling, using stats and math to teach computers to think and perform tasks on their own.",
+        "Machine learning is AI's brainy cousin, using stats and math to make computers learn from data without explicit instructions.",
+        "Machine learning: the field where computers learn from data without explicit instructions, now a subset of AI with deep roots in human cognitive processes."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1833829683939283,
+        "diversity": 0.8166170316060717,
+        "min": 0.058823529411764705,
+        "max": 0.375
+      },
+      "avgWordCount": 22.4,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Quantum_computing",
+      "title": "Quantum computing",
+      "summaries": [
+        "Quantum computers can outperform classical ones on some tasks, but scaling up remains a challenge.",
+        "Quantum computers are super-fast, but not yet super-practical. They can solve problems exponentially faster than classical computers, but are still in the experimental phase.",
+        "Quantum computers can perform some calculations exponentially faster than classical computers, but current hardware is largely experimental and not yet practical for real-world applications.",
+        "Quantum computers can do some calculations exponentially faster, but current hardware is experimental and prone to errors.",
+        "Quantum computers can perform calculations exponentially faster than classical computers, but current implementations are largely experimental and not yet practical for real-world applications."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.3375986769996781,
+        "diversity": 0.6624013230003218,
+        "min": 0.16666666666666666,
+        "max": 0.84
+      },
+      "avgWordCount": 20.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Blockchain",
+      "title": "Blockchain",
+      "summaries": [
+        "Blockchain: a decentralized, tamper-proof ledger of records, born from cryptography and peer-to-peer networks.",
+        "Blockchain is a secure, decentralized digital ledger that records transactions across many computers, making it resistant to alteration and ensuring each unit of value is transferred only once.",
+        "Blockchain's magic lies in linking blocks via cryptographic hashes, making transactions tamper-proof and resistant to alteration.",
+        "Blockchain: a distributed ledger with cryptographically linked blocks, making transactions resistant to alteration.",
+        "A blockchain is a secure, decentralized ledger of transactions linked via cryptographic hashes, making it hard to alter records without network consensus."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.13430609092830398,
+        "diversity": 0.865693909071696,
+        "min": 0.038461538461538464,
+        "max": 0.22580645161290322
+      },
+      "avgWordCount": 18.4,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Cryptocurrency",
+      "title": "Cryptocurrency",
+      "summaries": [
+        "Cryptocurrency's wild ride: from decentralized dream to billion-dollar bubble, with market caps of $2.8 trillion.",
+        "Cryptocurrencies are digital currencies not reliant on central authorities, using decentralized ledgers and consensus mechanisms, with over 25,000 varieties and a market capitalization of $2.8 trillion.",
+        "Cryptocurrencies are digital currencies without a central authority, stored in a blockchain, and secured through consensus mechanisms.",
+        "Cryptocurrency: a digital currency not controlled by central authorities, stored in blockchain, and viewed as a distinct asset class.",
+        "Cryptocurrencies are digital currencies not reliant on central authorities, stored in a blockchain ledger, and secured through consensus mechanisms."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.19728178295038754,
+        "diversity": 0.8027182170496124,
+        "min": 0,
+        "max": 0.5789473684210527
+      },
+      "avgWordCount": 19.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "5G",
+      "title": "5G",
+      "summaries": [
+        "5G offers lightning-fast speeds, near-instant response times, and massive connectivity, but building networks requires new infrastructure and access to suitable radio spectrum.",
+        "5G is the fifth generation of cellular networks, deploying in 2019 with speeds up to 10 Gbit/s and low latency, supporting applications like extended reality and IoT.",
+        "5G is the fifth-gen cellular network tech, launched in 2019, offering speeds up to 10 Gbit/s and supporting innovations like extended reality and IoT.",
+        "5G is the fifth cellular network generation, offering faster speeds (up to 10 Gbit/s), lower latency, and support for IoT, extended reality, and autonomous vehicles.",
+        "5G is here, with faster speeds, lower latency, and new infrastructure needs, supporting extended reality, autonomous vehicles, and the Internet of Things."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1629072396060936,
+        "diversity": 0.8370927603939065,
+        "min": 0.02631578947368421,
+        "max": 0.38461538461538464
+      },
+      "avgWordCount": 24,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Internet_of_things",
+      "title": "Internet of things",
+      "summaries": [
+        "The Internet of Things (IoT) connects devices to exchange data over networks, not just the public internet, using sensors, processing, and software.",
+        "The Internet of Things (IoT) connects physical objects with sensors, processing, and software for data exchange, with applications in smart homes, businesses, and industries.",
+        "The Internet of Things (IoT) is a network of physical objects connected to the internet, enabling data exchange and automation. Its applications range from smart homes to commercial asset tracking.",
+        "IoT connects devices via sensors, processing, and networks, but raises security and privacy concerns.",
+        "The Internet of Things (IoT) describes connected devices that exchange data over networks, encompassing a broad field of engineering and technologies."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.21430335844382492,
+        "diversity": 0.785696641556175,
+        "min": 0.02857142857142857,
+        "max": 0.37037037037037035
+      },
+      "avgWordCount": 22.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "CRISPR_gene_editing",
+      "title": "CRISPR gene editing",
+      "summaries": [
+        "CRISPR-Cas9 gene editing: a precise, efficient, and cost-effective tool for modifying genomes, with potential applications in medicine, agriculture, and biotechnology.",
+        "CRISPR-Cas9 revolutionizes genome editing with precision, speed, and cost-effectiveness, opening doors to medical breakthroughs and bioethical debates.",
+        "CRISPR-Cas9 gene editing: precise, efficient, and revolutionary, but also raises controversy and bioethical concerns.",
+        "CRISPR-Cas9 gene editing: a precise, cost-effective tool that's changing biotech and medicine, but also raising bioethical concerns.",
+        "Meet CRISPR, the gene-editing 'scissors' that can chop, swap, and silence genes with precision, revolutionizing biotech and medicine, but also sparking controversy."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.17802387031766898,
+        "diversity": 0.821976129682331,
+        "min": 0.08571428571428572,
+        "max": 0.45
+      },
+      "avgWordCount": 18,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Black_hole",
+      "title": "Black hole",
+      "summaries": [
+        "Black holes are cosmic vacuum cleaners, warping space-time with gravity so strong not even light can escape, and their existence was predicted by Einstein's theory of general relativity.",
+        "Black holes are so dense that nothing escapes, not even light, thanks to Einstein's theory of general relativity.",
+        "Black holes are so dense that their gravity traps light, with their existence confirmed by Einstein's theory of general relativity.",
+        "Black holes are cosmic vacuum cleaners so dense that nothing, not even light, can escape their gravitational pull.",
+        "Black holes are cosmic vacuum cleaners that warp space, siphoning matter and light, with their event horizon marking the point of no return."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.29239658980833383,
+        "diversity": 0.7076034101916662,
+        "min": 0.16129032258064516,
+        "max": 0.47619047619047616
+      },
+      "avgWordCount": 21.4,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Mars_exploration",
+      "title": "Exploration of Mars",
+      "summaries": [
+        "Mars exploration: 60% of missions failed, but 9 vehicles are currently on the Red Planet, including 2 rovers and 7 orbiters.",
+        "Mars exploration has come a long way since the first flyby in 1965, with 11 active missions today: 2 rovers, 7 orbiters, and 2 landers.",
+        "NASA's Curiosity and Perseverance rovers keep exploring, while China's Zhurong rover snoozes, amidst a swarm of orbiters and sample return plans.",
+        "Mars exploration has seen a significant increase in knowledge, with 60% of spacecraft failing, but 2 active rovers and 7 orbiters continuing to survey the planet.",
+        "Mars missions have increased 10-fold since 1997, with 2 active rovers and 7 orbiters currently exploring the planet."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1587032031588483,
+        "diversity": 0.8412967968411517,
+        "min": 0.027777777777777776,
+        "max": 0.2857142857142857
+      },
+      "avgWordCount": 22.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Climate_change",
+      "title": "Climate change",
+      "summaries": [
+        "Climate change: Humans have driven global temps up 1.5°C since the Industrial Revolution, and if left unchecked, will reach 2.8°C by century's end.",
+        "The Earth's average temperature has risen by 2.5°F since the Industrial Revolution, mainly due to fossil fuel burning and greenhouse gas emissions.",
+        "Climate change is human-induced and driving 1.5°C (2.5°F) temperature rise since the Industrial Revolution, with dire consequences for the environment, human health, and economies.",
+        "Humans have warmed the Earth by 1.5°C since the Industrial Revolution, and it's getting worse – faster than ever.",
+        "Global temps rose 1.5°C since the Industrial Revolution, mostly due to fossil fuel emissions, with far-reaching environmental & health consequences."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.19887128640514756,
+        "diversity": 0.8011287135948524,
+        "min": 0.14705882352941177,
+        "max": 0.2857142857142857
+      },
+      "avgWordCount": 21.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Nuclear_fusion",
+      "title": "Nuclear fusion",
+      "summaries": [
+        "Scientists have been fusing together for a century, from Harkins' 1915 proposal to Ivy Mike's 1952 thermonuclear test.",
+        "Fusion plasma is the energy source for all stars; scientists have been experimenting with it since the 1920s, but a reliable power source remains elusive.",
+        "Scientists have been chasing nuclear fusion for over a century, finally achieving a breakthrough in the 1950s with the development of thermonuclear bombs.",
+        "Nuclear fusion: where stars shine and scientists try",
+        "Scientists have been trying to harness nuclear fusion since the 1920s, with early experiments by Ernest Walton and Patrick Blackett, and later breakthroughs in deuterium-tritium reactions."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1373181523732221,
+        "diversity": 0.8626818476267779,
+        "min": 0.037037037037037035,
+        "max": 0.23529411764705882
+      },
+      "avgWordCount": 20,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Vaccine",
+      "title": "Vaccine",
+      "summaries": [
+        "Vaccines are a scientifically-verified shield against infectious diseases, offering acquired immunity through weakened or killed disease-causing agents.",
+        "Vaccines give your immune system a head start in fighting off diseases, and it's a strategy that's been proven to save millions of lives.",
+        "The magic of vaccines: protecting us from infectious diseases and saving lives. Effectiveness backed by science, safety confirmed.",
+        "Vaccines work by introducing a weakened microbe that trains the immune system to destroy it, and subsequently any similar microbes it encounters.",
+        "Vaccines: the ultimate immune system hack, making diseases obsolete with 99% efficacy."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.07148037662498175,
+        "diversity": 0.9285196233750183,
+        "min": 0,
+        "max": 0.125
+      },
+      "avgWordCount": 18.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Stock_market",
+      "title": "Stock market",
+      "summaries": [
+        "The global stock market is massive, with a $111 trillion market cap, and 16 exchanges account for 87% of global capitalization.",
+        "The global stock market has grown to a whopping $111 trillion, with the US, Japan, and UK holding the top spots.",
+        "The stock market is where buyers and sellers trade ownership claims on businesses, with over $111 trillion in global market capitalization as of 2023.",
+        "The global stock market has grown exponentially, with a total market capitalization of $111 trillion by 2023, and 16 major exchanges accounting for 87% of global capitalization.",
+        "The global stock market has expanded from $2.5 trillion in 1980 to $111 trillion in 2023, with 16 dominant exchanges accounting for 87% of global capitalization."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.35579374201787994,
+        "diversity": 0.6442062579821201,
+        "min": 0.23333333333333334,
+        "max": 0.56
+      },
+      "avgWordCount": 23.8,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Inflation",
+      "title": "Inflation",
+      "summaries": [
+        "Inflation is a stealthy thief that siphons purchasing power, but economists now prefer a low-steady rate to avoid recessions.",
+        "Inflation is when more money chases fewer goods, making each unit of currency less powerful. Central banks aim for a low and steady rate to avoid recessions and deflation.",
+        "Inflation is a rise in prices due to an increase in money supply or decreased purchasing power, with moderate levels often preferred by economists.",
+        "Inflation is a rise in the average price of goods and services, reducing the value of money and purchasing power.",
+        "Inflation is the silent thief of purchasing power, eating away at your money's value over time."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.10599133821115245,
+        "diversity": 0.8940086617888475,
+        "min": 0.027777777777777776,
+        "max": 0.18181818181818182
+      },
+      "avgWordCount": 21.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Supply_chain",
+      "title": "Supply chain",
+      "summaries": [
+        "Supply chains are complex logistics systems that convert raw materials into finished products, with a focus on optimizing flow for efficiency and customer responsiveness.",
+        "Supply chains are complex logistics systems that optimize the flow of goods, but the 'chain' metaphor doesn't quite fit, as they're often dynamic and loosely coupled networks.",
+        "A supply chain is a complex network of facilities converting raw materials into finished products, with logistics and management aimed at efficiency.",
+        "Supply chains are complex logistics systems where companies optimize the flow of goods, but transparency and ethics are increasingly important.",
+        "A supply chain is a complex network of businesses working together to convert raw materials into finished products, distributing them to end consumers while optimizing flow for efficiency."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.23042206381045402,
+        "diversity": 0.769577936189546,
+        "min": 0.06976744186046512,
+        "max": 0.4
+      },
+      "avgWordCount": 24.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Remote_work",
+      "title": "Remote work",
+      "summaries": [
+        "Remote work has been around for centuries, but tech advancements and COVID-19 accelerated its adoption, sparking debate on its benefits and drawbacks.",
+        "Remote work has been around for centuries, but COVID-19 accelerated its adoption, with many employees embracing flexible work arrangements for better work-life balance and environmental benefits.",
+        "Remote work's been around for centuries, but it's only recently become the norm, thanks to COVID-19.",
+        "Remote work has come a long way, from 1970s satellite offices to 2020s Zoom towns, and back again.",
+        "Remote work has been around for centuries, but technology made it mainstream in the 1970s, and the pandemic accelerated its adoption."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.22833936672646354,
+        "diversity": 0.7716606332735365,
+        "min": 0.03333333333333333,
+        "max": 0.43333333333333335
+      },
+      "avgWordCount": 20.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Startup_company",
+      "title": "Startup company",
+      "summaries": [
+        "Startups are high-risk ventures driven by entrepreneurs seeking scalable business models, often plagued by uncertainty and high failure rates.",
+        "Startups are high-risk, high-reward businesses that require innovation, rapid growth, and external funding.",
+        "Startup life: high risk, high reward, and a lot of uncertainty. But with design thinking, lean principles, and a healthy dose of skepticism, you might just make it big.",
+        "Startups are high-risk, high-reward ventures born from innovative ideas and sustained effort.",
+        "Startups are new businesses with an innovative stance, rapid growth potential, and vulnerability, often led by entrepreneurs who validate their business models through problem-solving and minimum viable products."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.11187183440124615,
+        "diversity": 0.8881281655987538,
+        "min": 0.029411764705882353,
+        "max": 0.25
+      },
+      "avgWordCount": 20.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Venture_capital",
+      "title": "Venture capital",
+      "summaries": [
+        "Venture capital firms provide early-stage funding to startups in exchange for equity, but this high-risk investment often comes with a high rate of failure. Historically, venture capital emerged from wealthy individuals and families, with Georges Doriot's ARDC pioneering institutional investment in 1946.",
+        "Venture capital firms fund high-growth startups in exchange for equity, taking on high risk with hopes of eventual returns through 'exit' events.",
+        "Venture capital is private equity financing for startups with high growth potential, trading risk for equity and control.",
+        "Venture capital: high-risk, high-reward investments in startups with growth potential, often providing strategic advice and significant control in exchange for a large ownership stake."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.19541098592874404,
+        "diversity": 0.8045890140712559,
+        "min": 0.14285714285714285,
+        "max": 0.25925925925925924
+      },
+      "avgWordCount": 26.5,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Social_media",
+      "title": "Social media",
+      "summaries": [
+        "Social media: from ancient BBS to viral chaos, humans just wanted to connect",
+        "Social media: the good, the bad, and the byte-sized.",
+        "Social media's a communal platform where users share, connect, and interact, but it also has a dark side: amplifying misinformation, exploiting kids, and polarizing society.",
+        "Social media's been around since the 1960s, with roots in bulletin boards and email services, but its impact on society is still widely debated."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.08195039397501197,
+        "diversity": 0.9180496060249881,
+        "min": 0.03225806451612903,
+        "max": 0.125
+      },
+      "avgWordCount": 17.75,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Mental_health",
+      "title": "Mental health",
+      "summaries": [
+        "Mental health is more than the absence of illness; it's a state of well-being that lets you live life to the fullest.",
+        "Mental health is a state of well-being, encompassing emotional, psychological, and social well-being, influencing daily life and decision-making.",
+        "Mental health is about more than just not being ill – it's a state of well-being that lets you enjoy life and cope with stress.",
+        "Mental health encompasses emotional, psychological, and social well-being, and affects how people handle stress, relationships, and decision-making.",
+        "Mental health is a broad state of well-being that includes emotional, psychological, and social well-being, crucial for managing stress and daily life."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.234791897757415,
+        "diversity": 0.765208102242585,
+        "min": 0.06896551724137931,
+        "max": 0.4230769230769231
+      },
+      "avgWordCount": 20.8,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Privacy",
+      "title": "Privacy",
+      "summaries": [
+        "Banksy's graffiti sums it up: humans desire secrecy, and technology changes how we're spied upon.",
+        "Privacy is the right to keep personal info and aspects of life out of the public domain, now including digital spaces.",
+        "Privacy is the right to keep personal info and aspects of life private, which varies across cultures and has evolved with technology.",
+        "Banksy's graffiti highlights the long-standing debate about the right to seclusion, which has evolved from physical to digital spaces.",
+        "The concept of privacy has evolved from physical spaces to digital realms, with philosophers like Aristotle and Locke shaping modern conceptions of individual rights."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1339430785358941,
+        "diversity": 0.8660569214641058,
+        "min": 0.029411764705882353,
+        "max": 0.36
+      },
+      "avgWordCount": 20.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Misinformation",
+      "title": "Misinformation",
+      "summaries": [
+        "The line between truth and lies gets blurrier as misinformation spreads rapidly on social media, fueled by cognitive biases and manipulated information.",
+        "Misinformation spreads faster than ever, widening societal divides, and governments struggle to balance free speech with fact-checking.",
+        "Misinformation is unintentional, inaccurate info, whereas disinformation is deliberate; both can cause societal harm, but policies to combat them can sometimes restrict media freedom.",
+        "Misinformation is the spread of incorrect or misleading info, often unintentionally, versus disinformation, which is intentionally deceptive.",
+        "Misinformation has been manipulating the masses since ancient times, with the advent of new tech making it more insidious."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.05836328512872711,
+        "diversity": 0.9416367148712729,
+        "min": 0.02702702702702703,
+        "max": 0.0967741935483871
+      },
+      "avgWordCount": 19.8,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Democracy",
+      "title": "Democracy",
+      "summaries": [
+        "Democracy's a messy definition, but we can agree it's a system where the people, not just the elite, have a say.",
+        "Democracy's the people's rule, but its definition is still up for debate.",
+        "Democracy is essentially rule by the people, but its definition and implementation have evolved significantly over time.",
+        "The Parthenon symbolizes democracy, but the concept has evolved over time, with its meaning debated among 2,234 adjectives.",
+        "Democracy is a system where power's in the people's hands, but its definition's murky, and in practice, it's often imperfect."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1503071494761537,
+        "diversity": 0.8496928505238464,
+        "min": 0.06451612903225806,
+        "max": 0.19230769230769232
+      },
+      "avgWordCount": 17.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Human_rights",
+      "title": "Human rights",
+      "summaries": [
+        "Human rights are universally recognized moral principles that establish standards of human behavior, considered inherent and inalienable to every individual.",
+        "Human rights are universally recognized moral principles that establish standards of human behavior, protected by both national and international laws, and encompass a broad range of civil, political, economic, social, and cultural rights.",
+        "Human rights are universal moral principles protected by law, encompassing civil, political, economic, social, and cultural rights, and have been a central focus in international relations since the Universal Declaration of Human Rights in 1948.",
+        "Human rights: universally recognized as inherent, inalienable, and essential to every individual, encompassing various civil, political, economic, social, and cultural rights.",
+        "Human rights are universal moral principles that establish standards of behavior, protected by national and international laws, and date back to ancient ideas about natural rights."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.2676822158239419,
+        "diversity": 0.7323177841760581,
+        "min": 0.08108108108108109,
+        "max": 0.45454545454545453
+      },
+      "avgWordCount": 27,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Nutrition",
+      "title": "Nutrition",
+      "summaries": [
+        "Nutrition is the biochemical process by which organisms use food and water to support life, with the right balance of nutrients being essential for survival and health.",
+        "Nutrition is the biochemical process by which organisms use food and water to survive, with too much or too little of essential nutrients causing malnutrition.",
+        "Nutrition is the biochemical process by which organisms use food and water to survive, grow, and reproduce, requiring a delicate balance of energy and nutrients.",
+        "Nutrition is the biochemical & physiological process by which organisms use food & water to support life, involving the intake & metabolism of nutrients to create energy & chemical structures.",
+        "Nutrition is the biochemical process by which organisms use food and water to sustain life, with nutrient imbalance causing malnutrition."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.4210305317426756,
+        "diversity": 0.5789694682573244,
+        "min": 0.3448275862068966,
+        "max": 0.5652173913043478
+      },
+      "avgWordCount": 25.4,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Sleep",
+      "title": "Sleep",
+      "summaries": [
+        "Sleep: a brain-cleansing, hormone-boosting, energy-saving ninja that's been sneaking up on us for hundreds of millions of years.",
+        "Sleep is a complex process that involves different brain wave patterns, reduced muscle activity, and restoration of bodily systems.",
+        "Your brain cleans house while you snooze, scrubbing away waste, including amyloid, a core purpose of sleep, and a reason why you should stop hitting snooze.",
+        "Your brain cleans house while you snooze, literally – removing waste products like amyloid – to keep you sharp and healthy.",
+        "Sleep is a vital state where the brain cleans itself of waste, restores immune and nervous systems, and regulates mood, memory, and cognitive function."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.0670903399734045,
+        "diversity": 0.9329096600265955,
+        "min": 0,
+        "max": 0.25806451612903225
+      },
+      "avgWordCount": 21.6,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Exercise",
+      "title": "Exercise",
+      "summaries": [
+        "Exercise is medicine that cures life: 150 minutes of moderate-intensity exercise a week can reduce the risk of health problems, and even a small amount is healthier than none.",
+        "Exercise boosts fitness, overall health, and life expectancy, with even short periods of moderate activity yielding benefits.",
+        "Exercise can boost overall health, reduce mortality rates, and improve cardiovascular endurance – but just 30 minutes of moderate activity a day can make a significant difference.",
+        "Regular exercise can reduce the risk of health problems with just 150 minutes of moderate-intensity exercise per week, or even a small daily dose.",
+        "Exercise boosts overall health, with 150 minutes of moderate-intensity exercise per week recommended for reducing risk of health problems."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.1842615484009796,
+        "diversity": 0.8157384515990204,
+        "min": 0.08571428571428572,
+        "max": 0.36666666666666664
+      },
+      "avgWordCount": 23.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Meditation",
+      "title": "Meditation",
+      "summaries": [
+        "Meditation's a mental trick to calm the mind, detach from thoughts, and chill out – minus the judgment.",
+        "Meditation's a mental workout where you calm your mind by focusing on something (or nothing) - sounds like a universal language, except it's not.",
+        "Meditation is a practice that trains attention, awareness, and emotional stability, with various techniques and definitions across cultures and traditions.",
+        "Meditation is a practice of training attention and awareness, detaching from reflexive thinking, and achieving a calm state – with varying techniques and traditions.",
+        "Meditation is a practice that trains attention and awareness, detaching from reflexive thinking to achieve a calm, stable state."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.11868352209731518,
+        "diversity": 0.8813164779026849,
+        "min": 0,
+        "max": 0.3333333333333333
+      },
+      "avgWordCount": 21,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Longevity",
+      "title": "Longevity",
+      "summaries": [
+        "Research reveals genetics and lifestyle as top longevity factors, with 20-30% of lifespan variation tied to heredity.",
+        "Human longevity is influenced by genetics and lifestyle, with factors like diet, exercise, and healthcare access playing a significant role in determining life expectancy.",
+        "Human longevity depends on genetics and lifestyle, with 20-30% of lifespan variation attributed to genetics and 10 genomic loci identified that influence lifespan and healthspan.",
+        "Human longevity is influenced by genetics, lifestyle, and access to healthcare, with life expectancy increasing globally.",
+        "Longevity is influenced by genetics and lifestyle, with 20-30% of lifespan variation attributed to genetics, while the rest is linked to modifiable environmental factors."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.23476332677333786,
+        "diversity": 0.7652366732266621,
+        "min": 0.125,
+        "max": 0.34615384615384615
+      },
+      "avgWordCount": 21.2,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Streaming_media",
+      "title": "Streaming media",
+      "summaries": [
+        "Streaming media lets you watch videos and listen to music instantly, without fully downloading them - a concept that's been around since the 1880s, but now's online and awesome.",
+        "Streaming media: from 1881's Théâtrophone to 2020's Netflix, it's a long history of instant gratification.",
+        "Streaming media has been around since the 19th century, evolving from live opera broadcasts to internet-based video and music streaming.",
+        "Streaming media has been around since 1881, but its modern form was pioneered by RealNetworks and Microsoft in the 1990s.",
+        "Streaming media has been around since the 19th century, evolving from phone lines to internet connectivity."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.18618440004302955,
+        "diversity": 0.8138155999569705,
+        "min": 0.027777777777777776,
+        "max": 0.4782608695652174
+      },
+      "avgWordCount": 20,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Video_game",
+      "title": "Video game",
+      "summaries": [
+        "From 1947's 'cathode-ray tube amusement device' to modern AAA games, the video game industry has evolved from simple interactive electronics to $159 billion revenue powerhouse.",
+        "The video game industry has grown from humble beginnings in the 1950s to a $159 billion global market, driven by innovations in hardware, software, and services.",
+        "The video game industry evolved from simple electronic games in the 1950s to a global market worth $159 billion by 2020, with genres spanning from casual to AAA titles.",
+        "The video game industry has evolved from humble beginnings, with the first consumer game 'Computer Space' in 1971, to a global market worth US$159 billion as of 2020.",
+        "The video game industry's origins date back to the 1940s with simple electronic games, evolving into modern AAA titles with estimated annual revenues of $159 billion."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.23079821709078674,
+        "diversity": 0.7692017829092133,
+        "min": 0.10256410256410256,
+        "max": 0.34375
+      },
+      "avgWordCount": 26.8,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Podcast",
+      "title": "Podcast",
+      "summaries": [
+        "Podcasting: the art of free content, except when it's not.",
+        "Podcasting has evolved from audio-only to video-rich, disrupting traditional revenue models with its free content and growing popularity.",
+        "Podcasts are a digital format for episodic audio or video content, evolving from audio-only to video-rich experiences.",
+        "The term 'podcast' was coined in 2004, combining 'iPod' and 'broadcast', and has since evolved from audio-only to include video and over 3 million podcasts with 200 million episodes.",
+        "The podcast revolution: from humble beginnings to video domination, with over 3 million podcasts and 200 million episodes."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.11038148459185759,
+        "diversity": 0.8896185154081424,
+        "min": 0.03225806451612903,
+        "max": 0.35714285714285715
+      },
+      "avgWordCount": 18.4,
+      "avgBadPatterns": 0
+    },
+    {
+      "category": "Virtual_reality",
+      "title": "Virtual reality",
+      "summaries": [
+        "Virtual reality creates immersive experiences using 3D headsets and motion controllers, with applications in entertainment, education, and research.",
+        "VR lets you live in a fake world, but don't worry, it's not as crazy as it sounds.",
+        "Virtual reality simulates immersive experiences with 3D displays and pose tracking, used in entertainment, education, and business.",
+        "Virtual reality simulates a world with 3D displays and tracking, used for training, entertainment, and research.",
+        "Virtual reality is a simulated experience that uses 3D displays and tracking to create an immersive virtual world, with applications in entertainment, education, and business."
+      ],
+      "metrics": {
+        "avgSimilarity": 0.21818181818181817,
+        "diversity": 0.7818181818181819,
+        "min": 0,
+        "max": 0.5
+      },
+      "avgWordCount": 18.8,
+      "avgBadPatterns": 0
+    }
+  ],
+  "summary": {
+    "articlesProcessed": 34,
+    "avgSimilarity": 0.18749063793800888,
+    "apiStats": {
+      "totalRequests": 283,
+      "totalTokens": 461280,
+      "totalRetries": 15,
+      "errorCount": 7,
+      "rateLimits": {
+        "limitRequests": 14400,
+        "limitTokens": 6000,
+        "remainingRequests": 14399,
+        "remainingTokens": 4544,
+        "resetRequests": 6,
+        "resetTokens": 14.56
+      },
+      "avgTokensPerRequest": 1630
+    }
+  },
+  "endTime": "2026-02-01T00:00:45.733Z"
+}

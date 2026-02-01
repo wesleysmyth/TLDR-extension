@@ -57,7 +57,7 @@ export const LENGTH_PRESETS = {
   brief: {
     name: 'Brief',
     description: '~30-40 words',
-    instruction: 'Summarize in 1-2 sentences. Keep it under 40 words total. Be concise but complete.',
+    instruction: 'Summarize in 2 complete sentences. Use 30-40 words (NOT fewer). Provide enough context to understand the main point and its significance.',
     maxTokens: 200,
     targetWords: 35,
   },
