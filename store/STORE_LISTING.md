@@ -66,7 +66,7 @@ TLDR uses blazing-fast AI to give you the gist of any article, blog post, or new
 • No tracking, no analytics, no data collection
 • API key stored locally in YOUR browser
 • Article text processed by Groq, then immediately discarded
-• Open source: github.com/[your-username]/tldr-extension
+• Open source: github.com/wesleysmyth/TLDR-extension
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -90,7 +90,7 @@ TLDR uses blazing-fast AI to give you the gist of any article, blog post, or new
 
 ❓ **QUESTIONS?**
 
-GitHub: github.com/[your-username]/tldr-extension
+GitHub: github.com/wesleysmyth/TLDR-extension
 Report issues or request features there!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -189,7 +189,7 @@ This extension summarizes web articles using AI, allowing users to quickly under
 ---
 
 ## Privacy Policy URL
-https://github.com/[your-username]/tldr-extension/blob/main/PRIVACY.md
+https://github.com/wesleysmyth/TLDR-extension/blob/main/PRIVACY.md
 
 ## Support URL
-https://github.com/[your-username]/tldr-extension/issues
+https://github.com/wesleysmyth/TLDR-extension/issues
