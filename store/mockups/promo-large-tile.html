@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=920, height=680">
+  <title>TLDR Large Tile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 920px;
+      height: 680px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative gradients */
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: #6366f1;
+      top: -100px;
+      left: -100px;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      background: #a855f7;
+      bottom: -50px;
+      right: 200px;
+    }
+
+    .left-content {
+      flex: 1;
+      max-width: 380px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 800;
+      color: white;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .description {
+      font-size: 18px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .features {
+      display: flex;
+      gap: 12px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .feature-icon {
+      font-size: 16px;
+    }
+
+    .feature-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .right-content {
+      position: relative;
+      z-index: 1;
+      margin-left: 40px;
+    }
+
+    /* Browser mockup */
+    .browser-frame {
+      width: 440px;
+      background: #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .browser-bar {
+      height: 36px;
+      background: #334155;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 8px;
+    }
+
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .browser-dot.red { background: #ef4444; }
+    .browser-dot.yellow { background: #eab308; }
+    .browser-dot.green { background: #22c55e; }
+
+    .browser-url {
+      flex: 1;
+      height: 22px;
+      background: #1e293b;
+      border-radius: 4px;
+      margin-left: 12px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .browser-content {
+      padding: 20px;
+      background: #f8fafc;
+    }
+
+    /* Mini popup */
+    .popup-preview {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .popup-header {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+    }
+
+    .popup-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .popup-body {
+      padding: 20px;
+    }
+
+    .popup-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6366f1;
+      margin-bottom: 8px;
+    }
+
+    .popup-text {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .popup-points {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .popup-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .popup-point::before {
+      content: "✓";
+      width: 16px;
+      height: 16px;
+      background: #6366f1;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      flex-shrink: 0;
+    }
+
+    .popup-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .popup-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .popup-btn.primary {
+      background: #6366f1;
+      color: white;
+    }
+
+    .popup-btn.secondary {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+
+    /* Floating elements */
+    .float-badge {
+      position: absolute;
+      background: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-1 {
+      top: -20px;
+      right: 20px;
+      color: #059669;
+    }
+
+    .badge-2 {
+      bottom: -20px;
+      left: 20px;
+      color: #6366f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-orb orb-1"></div>
+  <div class="gradient-orb orb-2"></div>
+
+  <div class="left-content">
+    <div class="logo-row">
+      <div class="logo">
+        <span class="logo-text">TL;DR</span>
+      </div>
+      <span class="brand-name">TLDR</span>
+    </div>
+
+    <h1>Summarize Any Article in <span>2 Seconds</span></h1>
+
+    <p class="description">AI-powered summaries with customizable tone, length, and focus. Stop reading everything — start knowing what matters.</p>
+
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">⚡</span>
+        <span class="feature-text">Free</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🚀</span>
+        <span class="feature-text">Fast</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🔒</span>
+        <span class="feature-text">Private</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-content">
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dot red"></div>
+        <div class="browser-dot yellow"></div>
+        <div class="browser-dot green"></div>
+        <div class="browser-url">🔒 techcrunch.com/article...</div>
+      </div>
+      <div class="browser-content">
+        <div class="popup-preview">
+          <div class="popup-header">
+            <h3>✨ The Gist</h3>
+          </div>
+          <div class="popup-body">
+            <div class="popup-label">Summary</div>
+            <div class="popup-text">Researchers cracked the code on AI reasoning—new technique lets models think step-by-step, boosting accuracy by 40% on complex tasks.</div>
+            <div class="popup-points">
+              <div class="popup-point">Novel training improves reasoning by 40%</div>
+              <div class="popup-point">Models can handle multi-step logic</div>
+              <div class="popup-point">Expected in products by Q3 2026</div>
+            </div>
+            <div class="popup-actions">
+              <div class="popup-btn secondary">🔄 Regenerate</div>
+              <div class="popup-btn primary">📋 Copy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="float-badge badge-1">✓ 2 sec read</div>
+    <div class="float-badge badge-2">✨ Witty • Brief</div>
+  </div>
+</body>
+</html>

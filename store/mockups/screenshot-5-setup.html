@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=800">
+  <title>TLDR Screenshot - Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 1280px;
+      height: 800px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .setup-container {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .left-side {
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .left-side h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .left-side h1 span {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .left-side p {
+      font-size: 18px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 15px;
+      color: white;
+    }
+
+    .step-text strong {
+      color: #a5b4fc;
+    }
+
+    .right-side {
+      width: 520px;
+    }
+
+    .setup-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    }
+
+    .card-header {
+      padding: 28px 32px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .card-logo {
+      width: 52px;
+      height: 52px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #6366f1;
+    }
+
+    .card-title h2 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .card-title p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .card-body {
+      padding: 32px;
+    }
+
+    .input-group {
+      margin-bottom: 24px;
+    }
+
+    .input-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .input-label span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .input-label a {
+      font-size: 13px;
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 16px 48px 16px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: 'SF Mono', Monaco, monospace;
+      color: #475569;
+      background: #f8fafc;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #6366f1;
+    }
+
+    .input-toggle {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #94a3b8;
+    }
+
+    .status-connected {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .status-icon {
+      width: 40px;
+      height: 40px;
+      background: #10b981;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .status-text h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 2px;
+    }
+
+    .status-text p {
+      font-size: 13px;
+      color: #059669;
+    }
+
+    .groq-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .groq-link:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+    }
+
+    .groq-logo {
+      width: 24px;
+      height: 24px;
+      background: #f97316;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .free-badge {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="setup-container">
+    <div class="left-side">
+      <div class="badge">⚡ Quick Setup</div>
+      <h1>Ready in <span>30 seconds</span></h1>
+      <p>Get your free API key from Groq and start summarizing articles instantly. No credit card required.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-text">Click <strong>"Get Free API Key"</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-text">Sign up for Groq <strong>(free tier available)</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-text">Copy your key <strong>(starts with gsk_)</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-text">Paste it here and <strong>you're done!</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="setup-card">
+        <div class="card-header">
+          <div class="card-logo">TL;DR</div>
+          <div class="card-title">
+            <h2>API Configuration</h2>
+            <p>Connect to Groq for lightning-fast AI</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="status-connected">
+            <div class="status-icon">✓</div>
+            <div class="status-text">
+              <h4>Connected to Groq</h4>
+              <p>Your API key is working perfectly</p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label">
+              <span>Your API Key</span>
+              <a href="#">Need help?</a>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" class="input-field" value="gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx" readonly>
+              <button class="input-toggle">👁</button>
+            </div>
+          </div>
+
+          <button class="groq-link">
+            <div class="groq-logo">G</div>
+            Get Free API Key from Groq
+            <span class="free-badge">FREE</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

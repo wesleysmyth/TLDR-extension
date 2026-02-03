@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=800">
+  <title>TLDR Screenshot - Before & After</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 1280px;
+      height: 800px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .headline {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .headline h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .headline h1 span {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .headline p {
+      font-size: 20px;
+      color: #94a3b8;
+    }
+
+    .comparison {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .side {
+      width: 480px;
+    }
+
+    .side-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .before .side-label {
+      color: #f87171;
+    }
+
+    .after .side-label {
+      color: #4ade80;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    }
+
+    .before .card {
+      border: 3px solid #f87171;
+    }
+
+    .after .card {
+      border: 3px solid #4ade80;
+    }
+
+    /* Before card - Article */
+    .article-preview {
+      padding: 24px;
+      height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-preview h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .article-preview .meta {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .read-time {
+      background: #fef2f2;
+      color: #dc2626;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .article-preview p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(transparent, white);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+
+    .scroll-indicator {
+      font-size: 12px;
+      color: #94a3b8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .scroll-indicator span {
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    /* After card - Summary */
+    .summary-preview {
+      padding: 24px;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .summary-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .summary-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+    }
+
+    .summary-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .summary-time {
+      margin-left: auto;
+      background: #ecfdf5;
+      color: #059669;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .summary-content {
+      flex: 1;
+    }
+
+    .summary-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 20px;
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border-left: 4px solid #6366f1;
+    }
+
+    .key-points-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .key-point-mini {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .key-point-mini::before {
+      content: "✓";
+      width: 20px;
+      height: 20px;
+      background: #6366f1;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .done-badge {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-radius: 10px;
+      color: #059669;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Arrow */
+    .arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .arrow-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    }
+
+    .arrow-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+    }
+
+    .arrow-text span {
+      display: block;
+      font-size: 24px;
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="headline">
+    <h1>From <span>8 Minutes</span> to <span>8 Seconds</span></h1>
+    <p>Stop reading everything. Start knowing what matters.</p>
+  </div>
+
+  <div class="comparison">
+    <div class="side before">
+      <div class="side-label">❌ Before TLDR</div>
+      <div class="card">
+        <div class="article-preview">
+          <h3>Researchers Achieve Major Breakthrough in AI Language Understanding</h3>
+          <div class="meta">
+            <span>TechCrunch</span>
+            <span class="read-time">⏱ 8 min read</span>
+          </div>
+          <p>In what experts are calling a significant leap forward for artificial intelligence, a team of researchers at a leading AI lab has developed a novel approach to language model training that dramatically improves reasoning capabilities across a wide range of complex tasks.</p>
+          <p>The breakthrough, detailed in a paper published today, introduces a technique called "structured reflection" that allows AI models to break down complex problems into smaller, more manageable components before attempting to solve them.</p>
+          <p>"This is fundamentally different from how previous models approached reasoning," said Dr. Sarah Chen, lead researcher on the project. "Instead of trying to jump directly to an answer, the model learns to think through problems step by step, much like a human expert would."</p>
+          <p>Early testing shows the new approach improves accuracy on complex reasoning tasks by up to 40% compared to existing methods...</p>
+          <div class="fade-overlay">
+            <div class="scroll-indicator">
+              <span>↓</span>
+              <span style="font-size: 11px;">Keep scrolling...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <div class="arrow-icon">→</div>
+      <div class="arrow-text">
+        TLDR
+        <span>2 sec</span>
+      </div>
+    </div>
+
+    <div class="side after">
+      <div class="side-label">✓ After TLDR</div>
+      <div class="card">
+        <div class="summary-preview">
+          <div class="summary-header">
+            <div class="summary-icon">✨</div>
+            <div class="summary-title">The Gist</div>
+            <div class="summary-time">⚡ 2 seconds</div>
+          </div>
+          <div class="summary-content">
+            <div class="summary-text">
+              Researchers cracked the code on AI reasoning—a new "structured reflection" technique lets models think step-by-step like humans, boosting accuracy by 40% on complex tasks.
+            </div>
+            <div class="key-points-mini">
+              <div class="key-point-mini">Novel training improves reasoning by 40%</div>
+              <div class="key-point-mini">Models break problems into smaller steps</div>
+              <div class="key-point-mini">Consumer products expected by Q3 2026</div>
+            </div>
+          </div>
+          <div class="done-badge">
+            ✓ Done reading. Time saved: 7 min 58 sec
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

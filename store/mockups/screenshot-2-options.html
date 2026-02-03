@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=800">
+  <title>TLDR Screenshot - Options</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 1280px;
+      height: 800px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .options-window {
+      width: 100%;
+      max-width: 900px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .options-header {
+      padding: 32px 40px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: #6366f1;
+    }
+
+    .header-text h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .header-text p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .status-badge {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .options-content {
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6366f1;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 16px;
+      background: linear-gradient(180deg, #6366f1, #8b5cf6);
+      border-radius: 2px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .option-group {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 24px;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .option-group:hover {
+      border-color: #e2e8f0;
+    }
+
+    .option-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .option-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .option-btn {
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid #e2e8f0;
+      background: white;
+      color: #475569;
+    }
+
+    .option-btn.selected {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    }
+
+    .option-btn .emoji {
+      font-size: 16px;
+    }
+
+    .option-btn .check {
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .option-btn.selected .check {
+      opacity: 1;
+    }
+
+    .option-description {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 12px;
+      line-height: 1.4;
+    }
+
+    .option-btn.selected + .option-description {
+      color: #6366f1;
+    }
+
+    .creativity-section {
+      background: #fef3c7;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .creativity-label {
+      font-weight: 600;
+      color: #92400e;
+      font-size: 14px;
+      min-width: 100px;
+    }
+
+    .creativity-slider {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .slider-track {
+      flex: 1;
+      height: 8px;
+      background: #fde68a;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .slider-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      border-radius: 4px;
+    }
+
+    .slider-thumb {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border: 3px solid #f59e0b;
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #92400e;
+      opacity: 0.7;
+    }
+
+    .creativity-value {
+      font-weight: 700;
+      color: #92400e;
+      font-size: 16px;
+      min-width: 80px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="options-window">
+    <div class="options-header">
+      <div class="logo">TL;DR</div>
+      <div class="header-text">
+        <h1>TLDR Settings</h1>
+        <p>Customize how your summaries look and feel</p>
+      </div>
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        Connected to Groq
+      </div>
+    </div>
+
+    <div class="options-content">
+      <div class="section">
+        <div class="section-title">Style Settings</div>
+        <div class="options-grid">
+          <div class="option-group">
+            <div class="option-label">🎭 Tone</div>
+            <div class="option-buttons">
+              <div class="option-btn selected">
+                <span><span class="emoji">😏</span> Witty</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">👔</span> Professional</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">😊</span> Casual</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">🎓</span> Academic</span>
+                <span class="check">✓</span>
+              </div>
+            </div>
+            <div class="option-description">Clever and engaging with wordplay</div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-label">📏 Length</div>
+            <div class="option-buttons">
+              <div class="option-btn">
+                <span><span class="emoji">⚡</span> One-liner</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn selected">
+                <span><span class="emoji">📝</span> Brief</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">📖</span> Detailed</span>
+                <span class="check">✓</span>
+              </div>
+            </div>
+            <div class="option-description">~30-40 words, 2-3 sentences</div>
+          </div>
+
+          <div class="option-group">
+            <div class="option-label">🎯 Focus</div>
+            <div class="option-buttons">
+              <div class="option-btn selected">
+                <span><span class="emoji">📊</span> Key Facts</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">💭</span> Opinions</span>
+                <span class="check">✓</span>
+              </div>
+              <div class="option-btn">
+                <span><span class="emoji">🔮</span> Implications</span>
+                <span class="check">✓</span>
+              </div>
+            </div>
+            <div class="option-description">Main factual takeaways</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="creativity-section">
+          <div class="creativity-label">✨ Creativity</div>
+          <div class="creativity-slider">
+            <div style="flex: 1;">
+              <div class="slider-track">
+                <div class="slider-fill"></div>
+                <div class="slider-thumb"></div>
+              </div>
+              <div class="slider-labels" style="margin-top: 8px;">
+                <span>Consistent</span>
+                <span>Balanced</span>
+                <span>Creative</span>
+              </div>
+            </div>
+          </div>
+          <div class="creativity-value">Balanced</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

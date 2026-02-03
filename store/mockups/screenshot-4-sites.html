@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=800">
+  <title>TLDR Screenshot - Multi-Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 1280px;
+      height: 800px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .site-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .site-favicon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .medium .site-favicon { background: #000000; }
+    .nyt .site-favicon { background: #000000; }
+    .wikipedia .site-favicon { background: #636363; }
+    .hackernews .site-favicon { background: #ff6600; }
+
+    .site-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .site-badge {
+      margin-left: auto;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .medium .site-badge { background: #f1f5f9; color: #475569; }
+    .nyt .site-badge { background: #fef3c7; color: #92400e; }
+    .wikipedia .site-badge { background: #ecfdf5; color: #059669; }
+    .hackernews .site-badge { background: #fef2f2; color: #dc2626; }
+
+    .site-content {
+      flex: 1;
+      display: flex;
+      padding: 16px;
+      gap: 16px;
+    }
+
+    .article-snippet {
+      flex: 1;
+      opacity: 0.6;
+    }
+
+    .article-snippet h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 8px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .article-snippet p {
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .mini-popup {
+      width: 220px;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 14px;
+      border: 2px solid #6366f1;
+      position: relative;
+    }
+
+    .mini-popup::before {
+      content: "✨";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 24px;
+      height: 24px;
+      background: #6366f1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .mini-popup-header {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6366f1;
+      margin-bottom: 8px;
+    }
+
+    .mini-popup-text {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #334155;
+    }
+
+    .footer {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Works Everywhere You Read</h1>
+    <p>News, blogs, documentation, research — TLDR handles it all</p>
+  </div>
+
+  <div class="grid">
+    <!-- Medium -->
+    <div class="site-card medium">
+      <div class="site-header">
+        <div class="site-favicon">M</div>
+        <div class="site-name">Medium</div>
+        <div class="site-badge">Blog</div>
+      </div>
+      <div class="site-content">
+        <div class="article-snippet">
+          <h3>Why Every Developer Should Learn System Design in 2026</h3>
+          <p>The landscape of software engineering has shifted dramatically. Here's why understanding distributed systems is no longer optional for career growth...</p>
+        </div>
+        <div class="mini-popup">
+          <div class="mini-popup-header">The Gist</div>
+          <div class="mini-popup-text">System design skills are now table stakes for senior roles—companies want engineers who can architect scalable solutions, not just write code.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NYT -->
+    <div class="site-card nyt">
+      <div class="site-header">
+        <div class="site-favicon">T</div>
+        <div class="site-name">The New York Times</div>
+        <div class="site-badge">News</div>
+      </div>
+      <div class="site-content">
+        <div class="article-snippet">
+          <h3>Climate Summit Reaches Historic Agreement on Carbon Emissions</h3>
+          <p>World leaders announced a landmark deal that commits major economies to aggressive carbon reduction targets, marking a turning point in global climate policy...</p>
+        </div>
+        <div class="mini-popup">
+          <div class="mini-popup-header">The Gist</div>
+          <div class="mini-popup-text">Major economies just agreed to cut emissions by 60% by 2035—the most ambitious climate deal ever, with actual enforcement mechanisms this time.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wikipedia -->
+    <div class="site-card wikipedia">
+      <div class="site-header">
+        <div class="site-favicon">W</div>
+        <div class="site-name">Wikipedia</div>
+        <div class="site-badge">Reference</div>
+      </div>
+      <div class="site-content">
+        <div class="article-snippet">
+          <h3>Quantum Computing</h3>
+          <p>Quantum computing is a type of computation that harnesses quantum mechanical phenomena such as superposition and entanglement to perform calculations...</p>
+        </div>
+        <div class="mini-popup">
+          <div class="mini-popup-header">The Gist</div>
+          <div class="mini-popup-text">Quantum computers use quantum physics tricks to solve certain problems exponentially faster than regular computers—still mostly experimental but advancing fast.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hacker News -->
+    <div class="site-card hackernews">
+      <div class="site-header">
+        <div class="site-favicon">Y</div>
+        <div class="site-name">Hacker News</div>
+        <div class="site-badge">Tech</div>
+      </div>
+      <div class="site-content">
+        <div class="article-snippet">
+          <h3>Show HN: I Built a Database That Runs Entirely in the Browser</h3>
+          <p>After 2 years of development, I'm releasing SQLite compiled to WebAssembly with full query support. Here's how it works and why it matters...</p>
+        </div>
+        <div class="mini-popup">
+          <div class="mini-popup-header">The Gist</div>
+          <div class="mini-popup-text">Developer built a full SQLite database running in browsers via WebAssembly—enables offline-first apps without any server infrastructure.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-badge">📰 News Sites</div>
+    <div class="footer-badge">📝 Blogs</div>
+    <div class="footer-badge">📚 Documentation</div>
+    <div class="footer-badge">🔬 Research</div>
+  </div>
+</body>
+</html>
