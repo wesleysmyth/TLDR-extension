@@ -5,7 +5,7 @@
   <title>TLDR Icon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700;8..60,800;8..60,900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -17,77 +17,67 @@
 
     .icon {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #a855f7 100%);
-      border-radius: 22%;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      border-radius: 16%;
       position: relative;
       overflow: hidden;
     }
 
-    /* Subtle inner glow */
-    .icon::before {
-      content: "";
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      right: 5%;
-      bottom: 5%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
-      border-radius: 18%;
-      pointer-events: none;
-    }
-
     .logo-text {
       font-family: 'Source Serif 4', Georgia, serif;
-      font-weight: 800;
+      font-weight: 900;
       color: white;
       text-align: center;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      line-height: 0.82;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
       position: relative;
       z-index: 1;
     }
 
-    /* Size variations */
+    /* Size: 128x128 - letters fill the box */
     .icon-128 {
       width: 128px;
       height: 128px;
     }
     .icon-128 .logo-text {
-      font-size: 32px;
+      font-size: 62px;
     }
 
+    /* Size: 48x48 */
     .icon-48 {
       width: 48px;
       height: 48px;
     }
     .icon-48 .logo-text {
-      font-size: 12px;
+      font-size: 23px;
     }
 
+    /* Size: 32x32 */
     .icon-32 {
       width: 32px;
       height: 32px;
     }
     .icon-32 .logo-text {
-      font-size: 8px;
+      font-size: 15px;
     }
 
+    /* Size: 16x16 */
     .icon-16 {
       width: 16px;
       height: 16px;
     }
     .icon-16 .logo-text {
-      font-size: 4.5px;
-      letter-spacing: -0.05em;
+      font-size: 7.5px;
     }
   </style>
 </head>
 <body>
   <div class="icon icon-SIZE">
-    <span class="logo-text">TL;DR</span>
+    <span class="logo-text">TL<br>DR</span>
   </div>
 </body>
 </html>
