@@ -29,6 +29,13 @@ const PROMO_TILES = [
     width: 920,
     height: 680,
     required: false
+  },
+  {
+    name: 'marquee-tile-1400x560',
+    template: 'promo-marquee-tile.html',
+    width: 1400,
+    height: 560,
+    required: false
   }
 ];
 
@@ -102,6 +109,7 @@ async function generatePromoTiles() {
   console.log('   3. Scroll to "Promotional images"');
   console.log('   4. Upload small-tile-440x280.png (required)');
   console.log('   5. Upload large-tile-920x680.png (recommended)');
+  console.log('   6. Upload marquee-tile-1400x560.png (optional, for featuring)');
 }
 
 generatePromoTiles().catch(console.error);

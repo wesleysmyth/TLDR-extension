@@ -1,12 +1,24 @@
 # TLDR - One-Click Article Summaries
 
 <p align="center">
-  <img src="assets/icon-128.png" alt="TLDR Logo" width="128" height="128">
+  <img src="assets/icons/icon-128.png" alt="TLDR Logo" width="128" height="128">
 </p>
 
 <p align="center">
   <strong>Get the gist of any article in seconds.</strong><br>
   A Chrome extension that uses AI to summarize articles with customizable tone, length, and focus.
+</p>
+
+<p align="center">
+  <a href="https://chrome.google.com/webstore/detail/hmphaahhfmfdebdjedigdmjjnbcdpjkm">
+    <img src="https://img.shields.io/chrome-web-store/v/hmphaahhfmfdebdjedigdmjjnbcdpjkm?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white&color=4285F4" alt="Chrome Web Store">
+  </a>
+  <a href="https://github.com/wesleysmyth/TLDR-extension/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/wesleysmyth/TLDR-extension?color=blue" alt="License">
+  </a>
+  <a href="https://github.com/wesleysmyth/TLDR-extension/stargazers">
+    <img src="https://img.shields.io/github/stars/wesleysmyth/TLDR-extension?style=social" alt="Stars">
+  </a>
 </p>
 
 <p align="center">
@@ -57,9 +69,13 @@
 
 ## 📦 Installation
 
-### From Chrome Web Store (Coming Soon)
+### From Chrome Web Store
 
-1. Visit the [Chrome Web Store listing](#)
+<a href="https://chrome.google.com/webstore/detail/hmphaahhfmfdebdjedigdmjjnbcdpjkm">
+  <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png" alt="Available in the Chrome Web Store" width="248">
+</a>
+
+1. Visit the [Chrome Web Store listing](https://chrome.google.com/webstore/detail/hmphaahhfmfdebdjedigdmjjnbcdpjkm)
 2. Click "Add to Chrome"
 3. Follow the setup wizard to get your free API key
 
