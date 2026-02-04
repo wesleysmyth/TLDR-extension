@@ -31,3 +31,6 @@ tests/.variation-checkpoint.json
 AGENT_PROMPT.md
 claude-progress.txt
 init.sh
+
+# Playwright MCP debug screenshots
+.playwright-mcp/
