@@ -507,3 +507,61 @@ body {
 .main::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* ============================================
+   Review Banner
+   ============================================ */
+
+.review-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-top: 1px solid #fbbf24;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.review-text {
+  flex: 1;
+  font-size: var(--font-size-xs);
+  color: #92400e;
+  line-height: 1.3;
+}
+
+.btn--review {
+  flex-shrink: 0;
+  background: #f59e0b;
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.btn--review:hover {
+  background: #d97706;
+}
+
+.review-dismiss {
+  background: none;
+  border: none;
+  color: #92400e;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.review-dismiss:hover {
+  opacity: 1;
+}

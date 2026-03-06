@@ -16,6 +16,7 @@ const State = {
 };
 
 let currentSummary = null;
+const REVIEW_THRESHOLD = 5;
 
 // ============================================
 // DOM Elements
@@ -48,6 +49,10 @@ const elements = {
   retryBtn: document.getElementById('retryBtn'),
   settingsBtn: document.getElementById('settingsBtn'),
   setupBtn: document.getElementById('setupBtn'),
+
+  // Review prompt
+  reviewBanner: document.getElementById('reviewBanner'),
+  reviewDismiss: document.getElementById('reviewDismiss'),
 };
 
 // ============================================
@@ -113,6 +118,11 @@ function renderSummary(data) {
   elements.providerBadge.textContent = `✨ ${provider}${cacheLabel}`;
 
   showState(State.SUCCESS);
+
+  // Increment summary count and check for review prompt
+  chrome.runtime.sendMessage({ type: 'INCREMENT_SUMMARY' }).then(() => {
+    checkReviewPrompt();
+  });
 }
 
 function renderError(error) {
@@ -136,6 +146,24 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+async function checkReviewPrompt() {
+  try {
+    const [countResult, dismissedResult] = await Promise.all([
+      chrome.runtime.sendMessage({ type: 'GET_SUMMARY_COUNT' }),
+      chrome.runtime.sendMessage({ type: 'IS_REVIEW_DISMISSED' }),
+    ]);
+
+    const count = countResult?.data?.count || 0;
+    const dismissed = dismissedResult?.data?.dismissed || false;
+
+    if (count >= REVIEW_THRESHOLD && !dismissed) {
+      elements.reviewBanner.classList.remove('hidden');
+    }
+  } catch (error) {
+    // Silently fail - review prompt is non-critical
+  }
 }
 
 // ============================================
@@ -286,6 +314,11 @@ elements.settingsBtn.addEventListener('click', () => {
 
 elements.setupBtn.addEventListener('click', () => {
   chrome.runtime.openOptionsPage();
+});
+
+elements.reviewDismiss.addEventListener('click', () => {
+  elements.reviewBanner.classList.add('hidden');
+  chrome.runtime.sendMessage({ type: 'DISMISS_REVIEW' });
 });
 
 // ============================================

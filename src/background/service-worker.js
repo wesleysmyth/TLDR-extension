@@ -57,6 +57,18 @@ async function handleMessage(message, sender) {
     case 'CLEAR_CACHE':
       return handleClearCache();
 
+    case 'INCREMENT_SUMMARY':
+      return handleIncrementSummary();
+
+    case 'GET_SUMMARY_COUNT':
+      return handleGetSummaryCount();
+
+    case 'IS_REVIEW_DISMISSED':
+      return handleIsReviewDismissed();
+
+    case 'DISMISS_REVIEW':
+      return handleDismissReview();
+
     default:
       throw new Error(`Unknown message type: ${message.type}`);
   }
@@ -199,6 +211,38 @@ async function handleCheckProviders() {
  */
 async function handleClearCache() {
   await storage.clearCache();
+  return { success: true };
+}
+
+/**
+ * Increment successful summary count
+ */
+async function handleIncrementSummary() {
+  const count = await storage.incrementSummaryCount();
+  return { success: true, data: { count } };
+}
+
+/**
+ * Get current summary count
+ */
+async function handleGetSummaryCount() {
+  const count = await storage.getSummaryCount();
+  return { success: true, data: { count } };
+}
+
+/**
+ * Check if review prompt was dismissed
+ */
+async function handleIsReviewDismissed() {
+  const dismissed = await storage.isReviewDismissed();
+  return { success: true, data: { dismissed } };
+}
+
+/**
+ * Dismiss the review prompt
+ */
+async function handleDismissReview() {
+  await storage.dismissReview();
   return { success: true };
 }
 

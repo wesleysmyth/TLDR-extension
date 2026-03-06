@@ -6,6 +6,8 @@
 const STORAGE_KEYS = {
   SETTINGS: 'tldr_settings',
   SUMMARY_CACHE: 'tldr_cache',
+  SUMMARY_COUNT: 'tldr_summary_count',
+  REVIEW_DISMISSED: 'tldr_review_dismissed',
 };
 
 const DEFAULT_SETTINGS = {
@@ -166,6 +168,59 @@ export const storage = {
     } catch (error) {
       console.error('[TLDR] Failed to get cache stats:', error);
       return { count: 0, maxEntries: MAX_CACHE_ENTRIES };
+    }
+  },
+
+  /**
+   * Increment the successful summary count
+   * @returns {Promise<number>} New count
+   */
+  async incrementSummaryCount() {
+    try {
+      const result = await chrome.storage.local.get(STORAGE_KEYS.SUMMARY_COUNT);
+      const count = (result[STORAGE_KEYS.SUMMARY_COUNT] || 0) + 1;
+      await chrome.storage.local.set({ [STORAGE_KEYS.SUMMARY_COUNT]: count });
+      return count;
+    } catch (error) {
+      console.error('[TLDR] Failed to increment summary count:', error);
+      return 0;
+    }
+  },
+
+  /**
+   * Get the current summary count
+   * @returns {Promise<number>} Current count
+   */
+  async getSummaryCount() {
+    try {
+      const result = await chrome.storage.local.get(STORAGE_KEYS.SUMMARY_COUNT);
+      return result[STORAGE_KEYS.SUMMARY_COUNT] || 0;
+    } catch (error) {
+      return 0;
+    }
+  },
+
+  /**
+   * Check if the review prompt has been dismissed
+   * @returns {Promise<boolean>} Whether review was dismissed
+   */
+  async isReviewDismissed() {
+    try {
+      const result = await chrome.storage.local.get(STORAGE_KEYS.REVIEW_DISMISSED);
+      return result[STORAGE_KEYS.REVIEW_DISMISSED] === true;
+    } catch (error) {
+      return false;
+    }
+  },
+
+  /**
+   * Dismiss the review prompt permanently
+   */
+  async dismissReview() {
+    try {
+      await chrome.storage.local.set({ [STORAGE_KEYS.REVIEW_DISMISSED]: true });
+    } catch (error) {
+      console.error('[TLDR] Failed to dismiss review:', error);
     }
   },
 
