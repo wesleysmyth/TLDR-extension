@@ -1,101 +1,118 @@
 # Chrome Web Store Listing
 
 ## Extension Name (45 chars max)
-TLDR - AI Article Summarizer
+TLDR - AI Article Summarizer for Web & News
 
 ## Short Description (132 characters max)
-Summarize any article in 2 seconds. AI-powered with customizable tone & length. Free, fast, private. No ChatGPT subscription needed.
+Summarize any article in 2 seconds with AI. Free, fast, private. Customize tone & length. Works on news, blogs, Wikipedia. No ChatGPT needed.
 
 ## Detailed Description
 
-**Stop wasting time reading articles you can summarize in 2 seconds.**
-
-TLDR uses blazing-fast AI to give you the gist of any article, blog post, or news story. Customize the summary style to match how YOU want to read.
+**TLDR is the fastest free AI article summarizer for Chrome.** Summarize any article, blog post, or news story in 2 seconds — no copy-pasting into ChatGPT, no subscriptions, no signup. Just click and read the summary. A smarter ChatGPT alternative built right into your browser.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-⚡ **WHY TLDR?**
+⚡ **WHY TLDR? THE BEST FREE AI SUMMARIZER FOR CHROME**
 
-✓ **Instant** - Summaries in ~2 seconds (10x faster than ChatGPT)
-✓ **Free** - Uses Groq's free API tier
-✓ **Private** - Your data never leaves your browser
-✓ **Customizable** - 36 style combinations
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📖 **HOW IT WORKS**
-
-1. Click the TLDR icon on any article
-2. Get your summary instantly
-3. That's it. No signup, no subscription.
+✓ **Instant AI Summaries** — Article summaries in ~2 seconds, 10x faster than copying into ChatGPT or GPT summarizer tools
+✓ **100% Free** — Uses Groq's free LLM API tier. No subscription, no paywall, no hidden costs
+✓ **Private by Design** — Your data never leaves your browser. No tracking, no analytics
+✓ **36 Style Combinations** — Customize tone, length, and focus to match how YOU want to read
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🎨 **CUSTOMIZE YOUR SUMMARIES**
+📖 **HOW THE AI ARTICLE SUMMARIZER WORKS**
+
+1. Click the TLDR icon on any article or web page
+2. Get your AI-powered summary instantly
+3. That's it. No signup, no subscription, no ChatGPT tab needed.
+
+TLDR extracts the article text, sends it to a fast LLM (powered by Groq), and returns a clean, readable summary in seconds. It's the simplest web page summarizer you'll ever use.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 **CUSTOMIZE YOUR AI SUMMARIES**
 
 **Tone Options:**
-• Witty - Clever, engaging, makes you smile
-• Professional - Clear, authoritative, business-ready
-• Casual - Friendly, like a friend explaining
-• Academic - Scholarly, nuanced, precise
+• Witty — Clever, engaging summaries that make you smile
+• Professional — Clear, authoritative, business-ready
+• Casual — Friendly, like a friend explaining the article
+• Academic — Scholarly, nuanced, precise
 
 **Length Options:**
-• One-liner (20 words) - Quick glance
-• Brief (35 words) - Daily reading
-• Detailed (70 words) - Full understanding
+• One-liner (20 words) — Quick glance, perfect for speed reading
+• Brief (35 words) — Daily reading companion
+• Detailed (70 words) — Full understanding of the article
 
 **Focus Options:**
-• Key Facts - Hard data and takeaways
-• Opinions - Author's perspective
-• Implications - Why it matters
+• Key Facts — Hard data and takeaways
+• Opinions — Author's perspective and arguments
+• Implications — Why it matters to you
+
+No other Chrome extension summarizer gives you this level of control over your AI summaries.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✨ **FEATURES**
+✨ **FEATURES — BETTER THAN COPYING INTO AI**
 
-• **One-Click Summaries** - No copy-pasting into ChatGPT
-• **Regenerate** - Don't like it? Get a fresh take
-• **Smart Cache** - Re-visit articles load instantly
-• **Copy Button** - Share summaries easily
-• **Works Everywhere** - News, blogs, docs, Wikipedia
+• **One-Click Summaries** — No copy-pasting articles into ChatGPT or other AI tools
+• **Regenerate** — Don't like the summary? Get a fresh take instantly
+• **Smart Cache** — Re-visit articles and load your summary instantly
+• **Copy Button** — Share AI summaries with your team easily
+• **Auto Summarize** — Works on any web page with article content
+• **AI Reader Mode** — Distraction-free article understanding
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🔒 **PRIVACY FIRST**
+💪 **WORKS ON EVERY SITE YOU READ**
 
-• No tracking, no analytics, no data collection
-• API key stored locally in YOUR browser
-• Article text processed by Groq, then immediately discarded
+• **News Summarizer:** NYT, BBC, Guardian, CNN, Reuters, AP News, The Verge
+• **Blog Summarizer:** Medium, Substack, WordPress, Ghost, Blogger
+• **Tech Summarizer:** Hacker News, Dev.to, TechCrunch, documentation
+• **Research Summarizer:** Wikipedia, arXiv, academic papers, journals
+• **Any Web Page:** If it has text, TLDR can summarize it
+
+Whether you need a Medium summarizer, Substack summarizer, news summarizer, or Wikipedia summarizer — TLDR handles them all with one click.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 **PRIVACY-FIRST AI SUMMARIZER**
+
+• No tracking, no analytics, no data collection — ever
+• API key stored locally in YOUR browser only
+• Article text processed by Groq's API, then immediately discarded
+• No data sold or shared with advertisers
 • Open source: github.com/wesleysmyth/TLDR-extension
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 **GETTING STARTED** (30 seconds)
+🚀 **GET STARTED IN 30 SECONDS**
 
-1. Install this extension
+1. Install TLDR — the free AI article summarizer
 2. Get a free API key at console.groq.com
 3. Paste your key in settings
-4. Click TLDR on any article!
+4. Click TLDR on any article and get your quick summary!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-💪 **WORKS GREAT ON**
+🏆 **WHO IS TLDR FOR?**
 
-• News: NYT, BBC, Guardian, CNN, Reuters
-• Blogs: Medium, Substack, WordPress, Ghost
-• Tech: Hacker News, Dev.to, documentation
-• Research: Wikipedia, arXiv, academic sites
+• **Busy professionals** — Save time by summarizing long reports and articles
+• **Students & researchers** — Quickly understand academic papers and sources
+• **News junkies** — Stay informed without reading every word
+• **Content curators** — Evaluate articles faster before sharing
+• **Anyone who values productivity** — Read smarter, not harder
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-❓ **QUESTIONS?**
+❓ **QUESTIONS OR FEEDBACK?**
 
 GitHub: github.com/wesleysmyth/TLDR-extension
-Report issues or request features there!
+Report issues or request features — we'd love to hear from you!
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**Keywords:** article summarizer, AI summary, TLDR, speed reading, save time, summarize articles, news summary, blog summary, read faster, productivity, Groq, LLM, ChatGPT alternative
+**Keywords:** article summarizer, AI summary, TLDR, web summarizer, news summarizer, blog summarizer, summarize articles, page summarizer, text summarizer, AI reader, speed reading, save time, productivity, free summarizer, Chrome extension summarizer, Groq, LLM, ChatGPT alternative, GPT summarizer, AI article reader, web page summary, quick summary, auto summarize, Medium summarizer, Substack summarizer, Wikipedia summarizer, article summary tool, AI reading assistant, summarize web page, one-click summary, news summary, blog summary, read faster, AI productivity tool
 
 ---
 
@@ -157,7 +174,7 @@ English (United States)
 ## Privacy Practices
 
 ### Single Purpose Description
-This extension summarizes web articles using AI, allowing users to quickly understand article content without reading the full text.
+TLDR - AI Article Summarizer for Web & News summarizes web articles using AI, allowing users to quickly understand article content without reading the full text.
 
 ### Permission Justifications
 

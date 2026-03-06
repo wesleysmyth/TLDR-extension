@@ -1,6 +1,6 @@
 {
   "name": "tldr-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "One-click article summaries powered by Chrome AI",
   "type": "module",
   "scripts": {
