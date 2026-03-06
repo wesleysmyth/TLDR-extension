@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "TLDR - AI Article Summarizer for Web & News",
   "version": "1.1.0",
-  "description": "Summarize any article in 2 seconds with AI. Free, fast, private. Customize tone & length. Works on news, blogs, Wikipedia. No ChatGPT needed.",
+  "description": "Summarize any article in 2 seconds with AI. Free, fast, private. Customize tone & length. Works on news, blogs, Wikipedia & more.",
 
   "permissions": [
     "activeTab",

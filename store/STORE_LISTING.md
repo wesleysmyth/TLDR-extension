@@ -4,7 +4,7 @@
 TLDR - AI Article Summarizer for Web & News
 
 ## Short Description (132 characters max)
-Summarize any article in 2 seconds with AI. Free, fast, private. Customize tone & length. Works on news, blogs, Wikipedia. No ChatGPT needed.
+Summarize any article in 2 seconds with AI. Free, fast, private. Customize tone & length. Works on news, blogs, Wikipedia & more.
 
 ## Detailed Description
 
