@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>TLDR - Free AI Article Summarizer | Chrome Extension</title>
+  <meta name="description" content="Summarize any article in 2 seconds with AI. Free Chrome extension with customizable tone, length, and focus. Works on news, blogs, Wikipedia, and more.">
+  <meta name="keywords" content="article summarizer, AI summary, TLDR, Chrome extension, news summarizer, blog summarizer, free summarizer, ChatGPT alternative, web page summary, productivity">
+  <link rel="canonical" href="https://wesleysmyth.github.io/TLDR-extension/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TLDR - Free AI Article Summarizer | Chrome Extension">
+  <meta property="og:description" content="Summarize any article in 2 seconds with AI. Free Chrome extension with customizable tone, length, and focus. Works on news, blogs, Wikipedia, and more.">
+  <meta property="og:url" content="https://wesleysmyth.github.io/TLDR-extension/">
+  <meta property="og:site_name" content="TLDR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TLDR - Free AI Article Summarizer | Chrome Extension">
+  <meta name="twitter:description" content="Summarize any article in 2 seconds with AI. Free Chrome extension with customizable tone, length, and focus.">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TLDR - AI Article Summarizer",
+    "description": "Summarize any article in 2 seconds with AI. Free Chrome extension with customizable tone, length, and focus.",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm",
+    "installUrl": "https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm",
+    "softwareVersion": "1.1.0",
+    "author": {
+      "@type": "Person",
+      "name": "Wesley Smith",
+      "url": "https://github.com/wesleysmyth"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-logo" aria-label="TLDR Home">TLDR</a>
+      <a href="https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm"
+         class="btn btn-primary"
+         target="_blank"
+         rel="noopener">
+        <svg class="chrome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+        Add to Chrome
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Summarize Any Article in 2 Seconds</h1>
+      <p class="hero-sub">
+        A free Chrome extension that turns long articles into instant AI summaries.
+        Customize the tone, length, and focus. No signup required.
+      </p>
+      <div class="hero-cta">
+        <a href="https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm"
+           class="btn btn-primary btn-large"
+           target="_blank"
+           rel="noopener">
+          <svg class="chrome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+          Add to Chrome &mdash; It's Free
+        </a>
+      </div>
+      <p class="hero-note">Chrome Web Store &middot; Free forever &middot; No account needed</p>
+
+      <!-- Screenshot Placeholder -->
+      <div class="hero-screenshot" role="img" aria-label="Screenshot of the TLDR extension summarizing an article">
+        <div class="hero-screenshot-inner">
+          <span class="mock-logo">TLDR</span>
+          <span>Extension screenshot placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="proof" aria-label="Social proof">
+    <div class="container">
+      <span class="proof-item">39+ users</span>
+      <span class="proof-dot" aria-hidden="true"></span>
+      <span class="proof-item">Free Forever</span>
+      <span class="proof-dot" aria-hidden="true"></span>
+      <span class="proof-item">Privacy First</span>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>Why TLDR?</h2>
+        <p>Everything you need to read smarter, nothing you don't.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">&#9889;</div>
+          <h3>Instant AI Summaries</h3>
+          <p>Get the gist of any article in about 2 seconds. Faster than copying into ChatGPT, and built right into your browser.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">&#9881;</div>
+          <h3>36 Style Combinations</h3>
+          <p>Choose from 4 tones, 3 lengths, and 3 focus areas. Witty one-liners or detailed academic briefs &mdash; your call.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">&#128274;</div>
+          <h3>Private by Design</h3>
+          <p>No tracking. No analytics. No data collection. Your API key lives in your browser and nowhere else.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how" id="how">
+    <div class="container">
+      <div class="how-header">
+        <h2>How It Works</h2>
+        <p>Three clicks. That's it.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-content">
+            <h3>Click the TLDR icon</h3>
+            <p>Navigate to any article and click the extension icon in your toolbar.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-content">
+            <h3>Get your AI summary</h3>
+            <p>In roughly 2 seconds, you'll see a clean summary with key points.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-content">
+            <h3>Copy, share, or regenerate</h3>
+            <p>One-click copy. Don't love it? Hit regenerate for a fresh take.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works Everywhere -->
+  <section class="section sites" id="sites">
+    <div class="container">
+      <div class="sites-header">
+        <h2>Works Everywhere You Read</h2>
+        <p>If it has text, TLDR can summarize it.</p>
+      </div>
+      <div class="sites-grid">
+        <div class="site-group">
+          <div class="site-group-label">News</div>
+          <div class="site-group-names">NYT, BBC, CNN, Reuters, The Guardian</div>
+        </div>
+        <div class="site-group">
+          <div class="site-group-label">Blogs</div>
+          <div class="site-group-names">Medium, Substack, WordPress, Ghost</div>
+        </div>
+        <div class="site-group">
+          <div class="site-group-label">Tech</div>
+          <div class="site-group-names">Hacker News, Dev.to, TechCrunch</div>
+        </div>
+        <div class="site-group">
+          <div class="site-group-label">Research</div>
+          <div class="site-group-names">Wikipedia, arXiv, academic papers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Ready to Save Hours of Reading?</h2>
+      <p>Install TLDR and start getting instant AI summaries on every article you read.</p>
+      <a href="https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm"
+         class="btn btn-primary btn-large"
+         target="_blank"
+         rel="noopener">
+        <svg class="chrome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+        Add to Chrome &mdash; It's Free
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-copy">TLDR &middot; Free AI Article Summarizer</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/wesleysmyth/TLDR-extension" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://github.com/wesleysmyth/TLDR-extension/blob/main/PRIVACY.md" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="https://chromewebstore.google.com/detail/tldr-article-summarizer/hmphaahhfmfdebdjedigdmjjnbcdpjkm" target="_blank" rel="noopener">Chrome Web Store</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
